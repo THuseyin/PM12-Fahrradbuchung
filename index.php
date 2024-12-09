@@ -27,6 +27,10 @@
 
 
     <script src="map.js"></script>
-    <?php include 'setDB.php'; ?>
+    <?php 
+    
+    include 'setDB.php'; 
+    include ("generate_json_stations.php");
+    ?>
 </body>
 </html>

@@ -1,0 +1,2586 @@
+[
+    {
+        "Station_ID": "3710",
+        "Station_Name": "Hausener Weg \/ Ludwig-Landmann-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "100",
+        "Endvorgaenge": "101"
+    },
+    {
+        "Station_ID": "3717",
+        "Station_Name": "Praunheimer Landstraße \/ Im Vogelsgesang",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "74",
+        "Endvorgaenge": "63"
+    },
+    {
+        "Station_ID": "3916",
+        "Station_Name": "Lokalbahnhof",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "156",
+        "Endvorgaenge": "170"
+    },
+    {
+        "Station_ID": "3954",
+        "Station_Name": "Kleinmarkthalle",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "144",
+        "Endvorgaenge": "160"
+    },
+    {
+        "Station_ID": "3961",
+        "Station_Name": "Fressgass",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "454",
+        "Endvorgaenge": "467"
+    },
+    {
+        "Station_ID": "4014",
+        "Station_Name": "Campus Westend \/ Hansaallee \/ Bremer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "318",
+        "Endvorgaenge": "269"
+    },
+    {
+        "Station_ID": "6723",
+        "Station_Name": "Lise-Meitner-Str.\/ Kreuznacherstr. (Novotel)",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "354",
+        "Endvorgaenge": "359"
+    },
+    {
+        "Station_ID": "7596",
+        "Station_Name": "Dormero-Hotel \/ Europaallee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "245",
+        "Endvorgaenge": "254"
+    },
+    {
+        "Station_ID": "12623",
+        "Station_Name": "Deutschordenstraße \/ Heinrich-Hoffmann-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "280",
+        "Endvorgaenge": "279"
+    },
+    {
+        "Station_ID": "12656",
+        "Station_Name": "Bockenheimer Landstraße \/ Mendelssohnstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "170",
+        "Endvorgaenge": "176"
+    },
+    {
+        "Station_ID": "12939",
+        "Station_Name": "Osthafenplatz \/ Hanauer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "304",
+        "Endvorgaenge": "377"
+    },
+    {
+        "Station_ID": "15847",
+        "Station_Name": "Carl-Theodor-Reiffenstein-Platz \/ Hasengasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "419",
+        "Endvorgaenge": "442"
+    },
+    {
+        "Station_ID": "20077",
+        "Station_Name": "Theodor-Heuss-Allee \/ Hamburger- Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "156",
+        "Endvorgaenge": "155"
+    },
+    {
+        "Station_ID": "20098",
+        "Station_Name": "Europaallee  \/ Londoner Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "238",
+        "Endvorgaenge": "260"
+    },
+    {
+        "Station_ID": "23704",
+        "Station_Name": "DB Netz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "170",
+        "Endvorgaenge": "178"
+    },
+    {
+        "Station_ID": "23722",
+        "Station_Name": "Studierendenhaus Jügelstraße \/ Mertonstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "244",
+        "Endvorgaenge": "245"
+    },
+    {
+        "Station_ID": "23844",
+        "Station_Name": "Walter-Kolb-Straße \/ Elisabethenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "502",
+        "Endvorgaenge": "479"
+    },
+    {
+        "Station_ID": "28824",
+        "Station_Name": "Adalbertstraße \/ Schlossstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "197",
+        "Endvorgaenge": "212"
+    },
+    {
+        "Station_ID": "28835",
+        "Station_Name": "Kaufunger Straße \/ Kleine Seestraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "210",
+        "Endvorgaenge": "198"
+    },
+    {
+        "Station_ID": "28937",
+        "Station_Name": "Wilhelm-Leuschner-Straße\/ Windmühlstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "209",
+        "Endvorgaenge": "212"
+    },
+    {
+        "Station_ID": "28951",
+        "Station_Name": "Taunusstraße \/ Gallusanlage",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "166",
+        "Endvorgaenge": "174"
+    },
+    {
+        "Station_ID": "28969",
+        "Station_Name": "Alte Brücke \/ Mainkai",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "383",
+        "Endvorgaenge": "382"
+    },
+    {
+        "Station_ID": "29123",
+        "Station_Name": "Bürgeramt \/ Zeil",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "169",
+        "Endvorgaenge": "148"
+    },
+    {
+        "Station_ID": "31002",
+        "Station_Name": "Adalberstraße \/ Hamburger Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "195",
+        "Endvorgaenge": "119"
+    },
+    {
+        "Station_ID": "31139",
+        "Station_Name": "François-Mitterrand-Platz",
+        "Latitude": "0.0000000",
+        "Longitude": "0.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "0"
+    },
+    {
+        "Station_ID": "31166",
+        "Station_Name": "Bockenheimer Landstraße \/ Liebigstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "581",
+        "Endvorgaenge": "586"
+    },
+    {
+        "Station_ID": "31583",
+        "Station_Name": "Ostendstraße \/ Martin-Elsässer-Weg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "148",
+        "Endvorgaenge": "146"
+    },
+    {
+        "Station_ID": "35286",
+        "Station_Name": "François-Mitterrand-Platz",
+        "Latitude": "0.0000000",
+        "Longitude": "0.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "0"
+    },
+    {
+        "Station_ID": "40424",
+        "Station_Name": "Kurt-Schumacher Straße \/ Börneplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "76",
+        "Endvorgaenge": "70"
+    },
+    {
+        "Station_ID": "43880",
+        "Station_Name": "Mannheimer Straße \/ Hardenbergstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "214",
+        "Endvorgaenge": "235"
+    },
+    {
+        "Station_ID": "44072",
+        "Station_Name": "Grüneburgweg \/ Feldbergstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "357",
+        "Endvorgaenge": "353"
+    },
+    {
+        "Station_ID": "47276",
+        "Station_Name": "Europaallee \/ Den Haager Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "686",
+        "Endvorgaenge": "681"
+    },
+    {
+        "Station_ID": "53648",
+        "Station_Name": "Goldsteinstraße \/ Hahnstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "82",
+        "Endvorgaenge": "76"
+    },
+    {
+        "Station_ID": "53909",
+        "Station_Name": "François-Mitterrand-Platz",
+        "Latitude": "0.0000000",
+        "Longitude": "0.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "0"
+    },
+    {
+        "Station_ID": "119809",
+        "Station_Name": "Diesterwegstraße \/ Schweizer Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "114",
+        "Endvorgaenge": "105"
+    },
+    {
+        "Station_ID": "130493",
+        "Station_Name": "Leonardo-da-Vinci Allee \/ August-Euler Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "32",
+        "Endvorgaenge": "38"
+    },
+    {
+        "Station_ID": "135647",
+        "Station_Name": "Konstablerwache",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "1113",
+        "Endvorgaenge": "1125"
+    },
+    {
+        "Station_ID": "175002",
+        "Station_Name": "Horst-Schulmann Straße \/ Sonnemannstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "214",
+        "Endvorgaenge": "230"
+    },
+    {
+        "Station_ID": "214365",
+        "Station_Name": "Jürgen-Ponto-Platz \/ Neckarstraße (DB-Tower)",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "580",
+        "Endvorgaenge": "554"
+    },
+    {
+        "Station_ID": "214369",
+        "Station_Name": "Kaiserplatz \/ Kaiserstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "438",
+        "Endvorgaenge": "452"
+    },
+    {
+        "Station_ID": "214370",
+        "Station_Name": "Roßmarkt \/ Am Salzhaus",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "375",
+        "Endvorgaenge": "382"
+    },
+    {
+        "Station_ID": "214371",
+        "Station_Name": "Große Gallusstraße \/ Kirchnerstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "204",
+        "Endvorgaenge": "196"
+    },
+    {
+        "Station_ID": "214375",
+        "Station_Name": "Opernplatz \/ Fressgass",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "107",
+        "Endvorgaenge": "100"
+    },
+    {
+        "Station_ID": "214376",
+        "Station_Name": "Opernplatz \/ Bockenheimer Landstaße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "597",
+        "Endvorgaenge": "605"
+    },
+    {
+        "Station_ID": "214380",
+        "Station_Name": "Roßmarkt \/ An der Hauptwache",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "754",
+        "Endvorgaenge": "768"
+    },
+    {
+        "Station_ID": "214382",
+        "Station_Name": "Börse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "235",
+        "Endvorgaenge": "245"
+    },
+    {
+        "Station_ID": "214385",
+        "Station_Name": "Eschersheimer Landstraße \/ Adickes-Allee (Polizeip",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "218",
+        "Endvorgaenge": "209"
+    },
+    {
+        "Station_ID": "214387",
+        "Station_Name": "Nibelungenplatz \/ Nibelungen Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "231",
+        "Endvorgaenge": "208"
+    },
+    {
+        "Station_ID": "214388",
+        "Station_Name": "Grüneburgweg \/ Siesmayerstraße (Palmengarten)",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "192",
+        "Endvorgaenge": "183"
+    },
+    {
+        "Station_ID": "214393",
+        "Station_Name": "Beethovenstraße \/ Beethovenplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "122",
+        "Endvorgaenge": "122"
+    },
+    {
+        "Station_ID": "214394",
+        "Station_Name": "Bettinaplatz \/ Bettinastraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "298",
+        "Endvorgaenge": "297"
+    },
+    {
+        "Station_ID": "214397",
+        "Station_Name": "Eschenheimer Anlage \/ Oeder Weg (Verkehrsinsel)",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "472",
+        "Endvorgaenge": "485"
+    },
+    {
+        "Station_ID": "214399",
+        "Station_Name": "Bremer Platz \/ Fürstenbergstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "207",
+        "Endvorgaenge": "203"
+    },
+    {
+        "Station_ID": "214401",
+        "Station_Name": "Marbachweg \/ Eschersheimer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "114",
+        "Endvorgaenge": "103"
+    },
+    {
+        "Station_ID": "214402",
+        "Station_Name": "Eschersheimer Landstraße \/ Hügelstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "121",
+        "Endvorgaenge": "106"
+    },
+    {
+        "Station_ID": "214414",
+        "Station_Name": "Südbahnhof \/ Eingang Diesterwegplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "370",
+        "Endvorgaenge": "376"
+    },
+    {
+        "Station_ID": "214417",
+        "Station_Name": "Ziegelhüttenplatz \/ Ziegelhüttenweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "322",
+        "Endvorgaenge": "315"
+    },
+    {
+        "Station_ID": "214419",
+        "Station_Name": "Hauptbahnhof Haupteingang (Vorplatz)",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "2316",
+        "Endvorgaenge": "2254"
+    },
+    {
+        "Station_ID": "214441",
+        "Station_Name": "Bahnhof Niederrad",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "199",
+        "Endvorgaenge": "221"
+    },
+    {
+        "Station_ID": "214443",
+        "Station_Name": "Praunheimer Landstraße \/ Jean-Albert-Schwarz-Straß",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "69",
+        "Endvorgaenge": "94"
+    },
+    {
+        "Station_ID": "214444",
+        "Station_Name": "Voltastraße \/ An der Dammheide",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "166",
+        "Endvorgaenge": "163"
+    },
+    {
+        "Station_ID": "214445",
+        "Station_Name": "Theodor-Heuss-Allee \/ Varrentrappstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "288",
+        "Endvorgaenge": "299"
+    },
+    {
+        "Station_ID": "214446",
+        "Station_Name": "Westbahnhof",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "487",
+        "Endvorgaenge": "472"
+    },
+    {
+        "Station_ID": "214447",
+        "Station_Name": "Fritzlarerstraße \/ Kirchplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "174",
+        "Endvorgaenge": "184"
+    },
+    {
+        "Station_ID": "214448",
+        "Station_Name": "Carlo-Schmidt-Platz  \/ Depot",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "821",
+        "Endvorgaenge": "810"
+    },
+    {
+        "Station_ID": "214451",
+        "Station_Name": "Messe Haupteingang \/ Friedrich-Ebert-Anlage",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "269",
+        "Endvorgaenge": "296"
+    },
+    {
+        "Station_ID": "214452",
+        "Station_Name": "Frankenallee \/ Schwalbacherstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "309",
+        "Endvorgaenge": "304"
+    },
+    {
+        "Station_ID": "214453",
+        "Station_Name": "DB Zentrale \/ Stephensonstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "607",
+        "Endvorgaenge": "589"
+    },
+    {
+        "Station_ID": "214454",
+        "Station_Name": "Pfarrer-Perabo-Platz \/ Kleyerstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "882",
+        "Endvorgaenge": "882"
+    },
+    {
+        "Station_ID": "214455",
+        "Station_Name": "Adlerwerke Kleyerstrasse \/ Kriegkstrasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "561",
+        "Endvorgaenge": "558"
+    },
+    {
+        "Station_ID": "214456",
+        "Station_Name": "S-Bahn Station Galluswarte \/ Mainzer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "549",
+        "Endvorgaenge": "557"
+    },
+    {
+        "Station_ID": "214458",
+        "Station_Name": "Adam-Riese-Platz \/ Hafenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "213",
+        "Endvorgaenge": "227"
+    },
+    {
+        "Station_ID": "214459",
+        "Station_Name": "Mainzer Landstraße 191\/ Speyerer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "358",
+        "Endvorgaenge": "356"
+    },
+    {
+        "Station_ID": "214460",
+        "Station_Name": "Westhafenplatz \/ Speicherstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "636",
+        "Endvorgaenge": "624"
+    },
+    {
+        "Station_ID": "223134",
+        "Station_Name": "Skyline Plaza",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "192",
+        "Endvorgaenge": "172"
+    },
+    {
+        "Station_ID": "226253",
+        "Station_Name": "Woolworth Leipziger Strasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "252",
+        "Endvorgaenge": "246"
+    },
+    {
+        "Station_ID": "226254",
+        "Station_Name": "Bahnhof Rödelheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "167",
+        "Endvorgaenge": "155"
+    },
+    {
+        "Station_ID": "226255",
+        "Station_Name": "U-Bahn Station Leipziger Strasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "390",
+        "Endvorgaenge": "399"
+    },
+    {
+        "Station_ID": "226256",
+        "Station_Name": "Leonardo-da-Vinci-Allee \/ Am Römerhof",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "171",
+        "Endvorgaenge": "179"
+    },
+    {
+        "Station_ID": "226257",
+        "Station_Name": "Studentenwohnheim Ginnheimer Landstr. 42",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "450",
+        "Endvorgaenge": "453"
+    },
+    {
+        "Station_ID": "226258",
+        "Station_Name": "Goethe-Uni Bockenheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "373",
+        "Endvorgaenge": "355"
+    },
+    {
+        "Station_ID": "226263",
+        "Station_Name": "Studentenwohnheim Ludwig-Landmann-Str. 343",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "104",
+        "Endvorgaenge": "100"
+    },
+    {
+        "Station_ID": "226265",
+        "Station_Name": "Studentenwohnheim \/ Porthstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "65",
+        "Endvorgaenge": "63"
+    },
+    {
+        "Station_ID": "226266",
+        "Station_Name": "Frankenallee \/ Bushaltestelle Haus Gallus",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "185",
+        "Endvorgaenge": "179"
+    },
+    {
+        "Station_ID": "226270",
+        "Station_Name": "Industriehof",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "162",
+        "Endvorgaenge": "178"
+    },
+    {
+        "Station_ID": "226341",
+        "Station_Name": "Studentenwohnheim Sandhöfer Allee 2",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "205",
+        "Endvorgaenge": "227"
+    },
+    {
+        "Station_ID": "226345",
+        "Station_Name": "Blue-Towers",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "42",
+        "Endvorgaenge": "43"
+    },
+    {
+        "Station_ID": "226347",
+        "Station_Name": "Niederräder Brücke \/ DB Autohaus",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "17",
+        "Endvorgaenge": "18"
+    },
+    {
+        "Station_ID": "226348",
+        "Station_Name": "OLG (Zeil \/ Oberlandesgericht)",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "115",
+        "Endvorgaenge": "108"
+    },
+    {
+        "Station_ID": "226640",
+        "Station_Name": "Eurotheum \/ Neue Mainzer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "219",
+        "Endvorgaenge": "213"
+    },
+    {
+        "Station_ID": "227370",
+        "Station_Name": "Europagarten",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "321",
+        "Endvorgaenge": "337"
+    },
+    {
+        "Station_ID": "227445",
+        "Station_Name": "zzz4 vormals Sandhofschleife \/ Paul-Ehrlich-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "33",
+        "Endvorgaenge": "37"
+    },
+    {
+        "Station_ID": "227446",
+        "Station_Name": "S-Bahn Station Messe",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "53",
+        "Endvorgaenge": "52"
+    },
+    {
+        "Station_ID": "227447",
+        "Station_Name": "Ostbahnhof",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "214",
+        "Endvorgaenge": "215"
+    },
+    {
+        "Station_ID": "227448",
+        "Station_Name": "Stresemannallee \/ Mörfelder Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "111",
+        "Endvorgaenge": "105"
+    },
+    {
+        "Station_ID": "227451",
+        "Station_Name": "Eschersheimer Landstraße \/ Holzhausenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "243",
+        "Endvorgaenge": "243"
+    },
+    {
+        "Station_ID": "227452",
+        "Station_Name": "Stresemannallee \/ S-Bahn-Station",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "231",
+        "Endvorgaenge": "255"
+    },
+    {
+        "Station_ID": "227455",
+        "Station_Name": "Braubachstraße \/ Domstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "91",
+        "Endvorgaenge": "111"
+    },
+    {
+        "Station_ID": "227456",
+        "Station_Name": "Luisenstraße \/ Luisenplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "138",
+        "Endvorgaenge": "140"
+    },
+    {
+        "Station_ID": "227457",
+        "Station_Name": "Martin-Luther-Straße \/ Burgstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "135",
+        "Endvorgaenge": "140"
+    },
+    {
+        "Station_ID": "227458",
+        "Station_Name": "Friedberger Landstraße \/ Rohrbachstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "110",
+        "Endvorgaenge": "114"
+    },
+    {
+        "Station_ID": "227460",
+        "Station_Name": "Markus-Krankenhaus",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "99",
+        "Endvorgaenge": "99"
+    },
+    {
+        "Station_ID": "227461",
+        "Station_Name": "Rohrbachstraße \/ Hartmann-Ibach-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "106",
+        "Endvorgaenge": "73"
+    },
+    {
+        "Station_ID": "227462",
+        "Station_Name": "Sophienstraße \/ Ginnheimer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "158",
+        "Endvorgaenge": "153"
+    },
+    {
+        "Station_ID": "227464",
+        "Station_Name": "Wittelsbacher Allee\/ Habsburger Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "121",
+        "Endvorgaenge": "112"
+    },
+    {
+        "Station_ID": "227465",
+        "Station_Name": "Weidenbornstraße \/ Comeniusstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "25",
+        "Endvorgaenge": "30"
+    },
+    {
+        "Station_ID": "227467",
+        "Station_Name": "Saalburgallee \/ Wittelsbacherallee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "38",
+        "Endvorgaenge": "31"
+    },
+    {
+        "Station_ID": "227468",
+        "Station_Name": "Saalburgallee \/ Kettelerallee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "72",
+        "Endvorgaenge": "69"
+    },
+    {
+        "Station_ID": "227469",
+        "Station_Name": "Luxemburger Allee \/ Rhönstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "19",
+        "Endvorgaenge": "24"
+    },
+    {
+        "Station_ID": "227470",
+        "Station_Name": "Habsburger Allee \/ Rhönstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "207",
+        "Endvorgaenge": "216"
+    },
+    {
+        "Station_ID": "227471",
+        "Station_Name": "Gerbermühlstraße \/ Wehrstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "68",
+        "Endvorgaenge": "81"
+    },
+    {
+        "Station_ID": "227472",
+        "Station_Name": "Berger Straße \/ Eulengasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "57",
+        "Endvorgaenge": "57"
+    },
+    {
+        "Station_ID": "227473",
+        "Station_Name": "Berger Straße \/ Falltorstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "79",
+        "Endvorgaenge": "63"
+    },
+    {
+        "Station_ID": "227474",
+        "Station_Name": "Seckbacher Landstraße \/ Nußbaumstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "44",
+        "Endvorgaenge": "38"
+    },
+    {
+        "Station_ID": "227475",
+        "Station_Name": "Arnsburger Straße \/ Mainkurstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "318",
+        "Endvorgaenge": "301"
+    },
+    {
+        "Station_ID": "227476",
+        "Station_Name": "Kantstraße \/ Berger Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "409",
+        "Endvorgaenge": "413"
+    },
+    {
+        "Station_ID": "227478",
+        "Station_Name": "Eschenheimer Tor \/ Taubenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "219",
+        "Endvorgaenge": "233"
+    },
+    {
+        "Station_ID": "227479",
+        "Station_Name": "Am Weißen Stein \/ Maybachstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "33",
+        "Endvorgaenge": "34"
+    },
+    {
+        "Station_ID": "227481",
+        "Station_Name": "Eschersheimer Landstraße \/ Am Weißen Stein",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "41",
+        "Endvorgaenge": "40"
+    },
+    {
+        "Station_ID": "227482",
+        "Station_Name": "Eschersheimer Landstraße \/ Am Lindenbaum",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "25",
+        "Endvorgaenge": "19"
+    },
+    {
+        "Station_ID": "227483",
+        "Station_Name": "Eschersheimer Landstraße \/ Fritz-Tarnow-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "62",
+        "Endvorgaenge": "61"
+    },
+    {
+        "Station_ID": "227484",
+        "Station_Name": "Eschersheimer Landstraße \/ Grüneburgweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "207",
+        "Endvorgaenge": "201"
+    },
+    {
+        "Station_ID": "227486",
+        "Station_Name": "Gerbermühlstraße \/ Zum Schlegelhof",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "93",
+        "Endvorgaenge": "94"
+    },
+    {
+        "Station_ID": "227487",
+        "Station_Name": "Berger Straße \/ Höhenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "321",
+        "Endvorgaenge": "325"
+    },
+    {
+        "Station_ID": "227494",
+        "Station_Name": "HR \/ Bertramswiese 8",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "50",
+        "Endvorgaenge": "56"
+    },
+    {
+        "Station_ID": "227495",
+        "Station_Name": "DB Rent-Zentrale \/ Mainzer Landstr. 169",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "478",
+        "Endvorgaenge": "433"
+    },
+    {
+        "Station_ID": "227503",
+        "Station_Name": "Rödelheimer Landstraße \/ Breitenbachbrücke",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "49",
+        "Endvorgaenge": "49"
+    },
+    {
+        "Station_ID": "227712",
+        "Station_Name": "Darmstädter Lanstraße \/ Vergölst \/ Carglass",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "30",
+        "Endvorgaenge": "33"
+    },
+    {
+        "Station_ID": "227726",
+        "Station_Name": "Speyerer Straße \/ Koblenzer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "328",
+        "Endvorgaenge": "303"
+    },
+    {
+        "Station_ID": "227811",
+        "Station_Name": "Ruth-Mufang-Straße \/ Riedbergallee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "32",
+        "Endvorgaenge": "19"
+    },
+    {
+        "Station_ID": "227833",
+        "Station_Name": "Campus Riedberg \/ Institut für Organische Chemie",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "2",
+        "Endvorgaenge": "2"
+    },
+    {
+        "Station_ID": "227834",
+        "Station_Name": "Altenhöferallee \/ Werkstattzentrale",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "23",
+        "Endvorgaenge": "19"
+    },
+    {
+        "Station_ID": "227837",
+        "Station_Name": "Max-von-Laue-Straße \/ Biologicum",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "50",
+        "Endvorgaenge": "39"
+    },
+    {
+        "Station_ID": "227980",
+        "Station_Name": "Universitätsklinikum \/ Theodor-Stern-Kai",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "383",
+        "Endvorgaenge": "376"
+    },
+    {
+        "Station_ID": "229958",
+        "Station_Name": "Gravensteiner Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "26",
+        "Endvorgaenge": "29"
+    },
+    {
+        "Station_ID": "231558",
+        "Station_Name": "Gießener Straße \/ Ronneburgstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "53",
+        "Endvorgaenge": "49"
+    },
+    {
+        "Station_ID": "231563",
+        "Station_Name": "Gutleutstraße \/ Untermainanlage",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "376",
+        "Endvorgaenge": "369"
+    },
+    {
+        "Station_ID": "231564",
+        "Station_Name": "Buchrainplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "140",
+        "Endvorgaenge": "139"
+    },
+    {
+        "Station_ID": "231575",
+        "Station_Name": "Oeder Weg \/ Oberweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "375",
+        "Endvorgaenge": "365"
+    },
+    {
+        "Station_ID": "231602",
+        "Station_Name": "Im Prüfling \/ Throner Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "37",
+        "Endvorgaenge": "35"
+    },
+    {
+        "Station_ID": "231603",
+        "Station_Name": "Deutsche Bibliothek",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "198",
+        "Endvorgaenge": "192"
+    },
+    {
+        "Station_ID": "231638",
+        "Station_Name": "U-Bahn Preungesheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "59",
+        "Endvorgaenge": "77"
+    },
+    {
+        "Station_ID": "231648",
+        "Station_Name": "Rosa-Luxemburg-Straße \/ Ginnheimer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "123",
+        "Endvorgaenge": "118"
+    },
+    {
+        "Station_ID": "231653",
+        "Station_Name": "Gartenstraße \/ Holbeinstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "303",
+        "Endvorgaenge": "309"
+    },
+    {
+        "Station_ID": "231731",
+        "Station_Name": "Deutsche Bundesbank ",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "61",
+        "Endvorgaenge": "56"
+    },
+    {
+        "Station_ID": "231798",
+        "Station_Name": "Marbachweg \/ Eckenheimer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "55",
+        "Endvorgaenge": "51"
+    },
+    {
+        "Station_ID": "232067",
+        "Station_Name": "Gießener Straße \/ Marbachweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "38",
+        "Endvorgaenge": "43"
+    },
+    {
+        "Station_ID": "232102",
+        "Station_Name": "Friedberger Landstraße \/ Dortelweiler Straße ",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "35",
+        "Endvorgaenge": "40"
+    },
+    {
+        "Station_ID": "232330",
+        "Station_Name": "Universitätsklinikum \/ Kernbereich I",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "208",
+        "Endvorgaenge": "193"
+    },
+    {
+        "Station_ID": "232331",
+        "Station_Name": "Universitätsklinikum \/ Kernbereich II",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "50",
+        "Endvorgaenge": "53"
+    },
+    {
+        "Station_ID": "232342",
+        "Station_Name": "Universitätsklinikum Parkhaus \/ Sandhofstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "117",
+        "Endvorgaenge": "108"
+    },
+    {
+        "Station_ID": "232381",
+        "Station_Name": "S-Bahn Station Mühlberg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "109",
+        "Endvorgaenge": "88"
+    },
+    {
+        "Station_ID": "232598",
+        "Station_Name": "Mannheimer Straße \/ Stuttgarter Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "158",
+        "Endvorgaenge": "153"
+    },
+    {
+        "Station_ID": "240612",
+        "Station_Name": "Hauptbahnhof \/ Taxistand",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "782",
+        "Endvorgaenge": "886"
+    },
+    {
+        "Station_ID": "242520",
+        "Station_Name": "Campus Westend IG Farben",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "450",
+        "Endvorgaenge": "391"
+    },
+    {
+        "Station_ID": "242521",
+        "Station_Name": "Campus Westend Hörsaalzentrum",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "979",
+        "Endvorgaenge": "960"
+    },
+    {
+        "Station_ID": "242564",
+        "Station_Name": "Gerbermühlstraße \/ Walther-von-Cronberg-Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "271",
+        "Endvorgaenge": "261"
+    },
+    {
+        "Station_ID": "242622",
+        "Station_Name": "Tel-Aviv Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "132",
+        "Endvorgaenge": "147"
+    },
+    {
+        "Station_ID": "242625",
+        "Station_Name": "Radisson Blu Hotel",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "79",
+        "Endvorgaenge": "84"
+    },
+    {
+        "Station_ID": "242629",
+        "Station_Name": "Campus Westend \/ Hansa-Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "338",
+        "Endvorgaenge": "283"
+    },
+    {
+        "Station_ID": "242934",
+        "Station_Name": "Sportcampus Ginnheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "319",
+        "Endvorgaenge": "310"
+    },
+    {
+        "Station_ID": "244166",
+        "Station_Name": "Campus Riedberg Mensa",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "5",
+        "Endvorgaenge": "1"
+    },
+    {
+        "Station_ID": "245414",
+        "Station_Name": "Lindner Hotel Main Plaza",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "161",
+        "Endvorgaenge": "181"
+    },
+    {
+        "Station_ID": "247491",
+        "Station_Name": "Lyoner Str. \/ Herriotstr.",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "42",
+        "Endvorgaenge": "44"
+    },
+    {
+        "Station_ID": "247511",
+        "Station_Name": "Kaiserlei Ausgang Brüsseler Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "24",
+        "Endvorgaenge": "21"
+    },
+    {
+        "Station_ID": "247515",
+        "Station_Name": "Kaiserlei Ausgang Berliner Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "84",
+        "Endvorgaenge": "86"
+    },
+    {
+        "Station_ID": "249808",
+        "Station_Name": "Mövenpick Hotel",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "15",
+        "Endvorgaenge": "18"
+    },
+    {
+        "Station_ID": "249810",
+        "Station_Name": "DB Fernverkehr ",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "81",
+        "Endvorgaenge": "85"
+    },
+    {
+        "Station_ID": "250311",
+        "Station_Name": "Platz der Republik",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "182",
+        "Endvorgaenge": "189"
+    },
+    {
+        "Station_ID": "250321",
+        "Station_Name": "François-Mitterrand-Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "461",
+        "Endvorgaenge": "461"
+    },
+    {
+        "Station_ID": "250323",
+        "Station_Name": "Weserstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "150",
+        "Endvorgaenge": "157"
+    },
+    {
+        "Station_ID": "250324",
+        "Station_Name": "Wiesenhüttenplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "160",
+        "Endvorgaenge": "157"
+    },
+    {
+        "Station_ID": "250325",
+        "Station_Name": "Grüneburgweg \/ Leerbachstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "409",
+        "Endvorgaenge": "437"
+    },
+    {
+        "Station_ID": "250326",
+        "Station_Name": "Berger Straße \/ Hermesweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "166",
+        "Endvorgaenge": "189"
+    },
+    {
+        "Station_ID": "250334",
+        "Station_Name": "Hanauer Landstraße 287",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "166",
+        "Endvorgaenge": "185"
+    },
+    {
+        "Station_ID": "250335",
+        "Station_Name": "Eckenheimer Landstraße \/ Holzhausenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "50",
+        "Endvorgaenge": "52"
+    },
+    {
+        "Station_ID": "250337",
+        "Station_Name": "Martin-Elsässer-Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "152",
+        "Endvorgaenge": "149"
+    },
+    {
+        "Station_ID": "250338",
+        "Station_Name": "Frankenallee\/Rebstöcker Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "110",
+        "Endvorgaenge": "107"
+    },
+    {
+        "Station_ID": "250339",
+        "Station_Name": "Am Römerhof \/ Europa-Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "95",
+        "Endvorgaenge": "83"
+    },
+    {
+        "Station_ID": "250341",
+        "Station_Name": "Rebstockbad",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "83",
+        "Endvorgaenge": "89"
+    },
+    {
+        "Station_ID": "250342",
+        "Station_Name": "Mainzer Landstraße \/ Rüsselsheimer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "116",
+        "Endvorgaenge": "138"
+    },
+    {
+        "Station_ID": "250346",
+        "Station_Name": "Stadtbücherei Griesheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "59",
+        "Endvorgaenge": "71"
+    },
+    {
+        "Station_ID": "250348",
+        "Station_Name": "S-Bahn Station Griesheim Südseite",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "162",
+        "Endvorgaenge": "172"
+    },
+    {
+        "Station_ID": "250349",
+        "Station_Name": "Griesheimer Stadtweg \/ Schöffenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "79",
+        "Endvorgaenge": "70"
+    },
+    {
+        "Station_ID": "250370",
+        "Station_Name": "Geschwister-Scholl-Straße \/ Kollwitzstraße ",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "25",
+        "Endvorgaenge": "21"
+    },
+    {
+        "Station_ID": "250372",
+        "Station_Name": "U-Bahn Station Praunheim Heerstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "13",
+        "Endvorgaenge": "12"
+    },
+    {
+        "Station_ID": "250374",
+        "Station_Name": "Damaschkeanger \/ Heerstraße ",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "44",
+        "Endvorgaenge": "43"
+    },
+    {
+        "Station_ID": "250377",
+        "Station_Name": "In der Au \/ Westerbachstraße ",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "13",
+        "Endvorgaenge": "13"
+    },
+    {
+        "Station_ID": "250380",
+        "Station_Name": "Melanchthonplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "39",
+        "Endvorgaenge": "32"
+    },
+    {
+        "Station_ID": "250383",
+        "Station_Name": "Balduinstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "35",
+        "Endvorgaenge": "33"
+    },
+    {
+        "Station_ID": "250385",
+        "Station_Name": "Gemündener Straße \/ Miltenberger Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "37",
+        "Endvorgaenge": "38"
+    },
+    {
+        "Station_ID": "250387",
+        "Station_Name": "Cronstettenstraße \/ Klettenbergstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "31",
+        "Endvorgaenge": "33"
+    },
+    {
+        "Station_ID": "250396",
+        "Station_Name": "Glauburgstraße \/ Weberstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "335",
+        "Endvorgaenge": "366"
+    },
+    {
+        "Station_ID": "250397",
+        "Station_Name": "Grafenstraße \/ Reinhardstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "31",
+        "Endvorgaenge": "34"
+    },
+    {
+        "Station_ID": "250402",
+        "Station_Name": "Am Hochwehr \/ Hügelstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "127",
+        "Endvorgaenge": "119"
+    },
+    {
+        "Station_ID": "250408",
+        "Station_Name": "Römerberg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "190",
+        "Endvorgaenge": "206"
+    },
+    {
+        "Station_ID": "250409",
+        "Station_Name": "Alt-Fechenheim \/ Burglehen",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "20",
+        "Endvorgaenge": "23"
+    },
+    {
+        "Station_ID": "250411",
+        "Station_Name": "Gründenseestraße \/ Konstanzer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "7",
+        "Endvorgaenge": "2"
+    },
+    {
+        "Station_ID": "250415",
+        "Station_Name": "Rheinlandstraße \/ Schwanheimer Bahnstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "29",
+        "Endvorgaenge": "27"
+    },
+    {
+        "Station_ID": "250540",
+        "Station_Name": "Geisenheimer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "8",
+        "Endvorgaenge": "17"
+    },
+    {
+        "Station_ID": "250542",
+        "Station_Name": "Geisenheimer Straße \/ Mauritiusstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "22",
+        "Endvorgaenge": "34"
+    },
+    {
+        "Station_ID": "250543",
+        "Station_Name": "Rheinlandstraße \/ Henriette-Fürth-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "14",
+        "Endvorgaenge": "18"
+    },
+    {
+        "Station_ID": "250545",
+        "Station_Name": "Am Waldgraben \/ Am Wildpfad",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "15",
+        "Endvorgaenge": "17"
+    },
+    {
+        "Station_ID": "250548",
+        "Station_Name": "Schweizer Straße \/ Oppenheimer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "329",
+        "Endvorgaenge": "322"
+    },
+    {
+        "Station_ID": "250596",
+        "Station_Name": "Emmerich-Josef-Straße \/ Zuckschwerdtstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "21",
+        "Endvorgaenge": "21"
+    },
+    {
+        "Station_ID": "250600",
+        "Station_Name": "Bahnhof Höchst Nordseite \/ Adelonstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "29",
+        "Endvorgaenge": "31"
+    },
+    {
+        "Station_ID": "250605",
+        "Station_Name": "Königsteiner Straße \/ Sieringstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "24",
+        "Endvorgaenge": "21"
+    },
+    {
+        "Station_ID": "250606",
+        "Station_Name": "Liederbacher Straße \/ Hermann-Waibel-Allee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "10",
+        "Endvorgaenge": "9"
+    },
+    {
+        "Station_ID": "250611",
+        "Station_Name": "U-Bahn Station Heddernheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "70",
+        "Endvorgaenge": "71"
+    },
+    {
+        "Station_ID": "250614",
+        "Station_Name": "Eschersheimer Freibad \/ Im Uhrig",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "29",
+        "Endvorgaenge": "33"
+    },
+    {
+        "Station_ID": "250615",
+        "Station_Name": "Anne-Frank-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "18",
+        "Endvorgaenge": "16"
+    },
+    {
+        "Station_ID": "250618",
+        "Station_Name": "U-Bahn Station Zeilweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "26",
+        "Endvorgaenge": "28"
+    },
+    {
+        "Station_ID": "250620",
+        "Station_Name": "Elbinger Straße \/ Trakehner Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "133",
+        "Endvorgaenge": "140"
+    },
+    {
+        "Station_ID": "250622",
+        "Station_Name": "Lurgiallee \/ Sebastian-Kneipp-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "11",
+        "Endvorgaenge": "10"
+    },
+    {
+        "Station_ID": "250624",
+        "Station_Name": "Emil-Sulzbach Straße \/ Robert-Mayer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "287",
+        "Endvorgaenge": "275"
+    },
+    {
+        "Station_ID": "250656",
+        "Station_Name": "Franz-Rücker-Allee \/ Hedwig-Dransfeld-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "66",
+        "Endvorgaenge": "46"
+    },
+    {
+        "Station_ID": "250658",
+        "Station_Name": "Kettenhofweg \/ Corneliusstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "254",
+        "Endvorgaenge": "259"
+    },
+    {
+        "Station_ID": "250659",
+        "Station_Name": "Günthersburgallee \/ Rothschildallee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "113",
+        "Endvorgaenge": "97"
+    },
+    {
+        "Station_ID": "250661",
+        "Station_Name": "Hallgartenstraße \/ Hartmann-Ibach-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "44",
+        "Endvorgaenge": "49"
+    },
+    {
+        "Station_ID": "250664",
+        "Station_Name": "Grüne Straße \/ Hanauer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "173",
+        "Endvorgaenge": "173"
+    },
+    {
+        "Station_ID": "250668",
+        "Station_Name": "Burnitzstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "59",
+        "Endvorgaenge": "56"
+    },
+    {
+        "Station_ID": "250669",
+        "Station_Name": "Affentorplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "411",
+        "Endvorgaenge": "398"
+    },
+    {
+        "Station_ID": "250670",
+        "Station_Name": "S-Bahn Station Lokalbahnhof \/ Siemensstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "57",
+        "Endvorgaenge": "63"
+    },
+    {
+        "Station_ID": "250672",
+        "Station_Name": "Berger Straße \/ Rendeler Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "173",
+        "Endvorgaenge": "173"
+    },
+    {
+        "Station_ID": "250675",
+        "Station_Name": "Ernst-May-Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "16",
+        "Endvorgaenge": "15"
+    },
+    {
+        "Station_ID": "250676",
+        "Station_Name": "Alt-Fechenheim \/ Lappengasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "10",
+        "Endvorgaenge": "11"
+    },
+    {
+        "Station_ID": "250677",
+        "Station_Name": "Bodenseestraße \/ Am Rütschlehen",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "19",
+        "Endvorgaenge": "20"
+    },
+    {
+        "Station_ID": "250678",
+        "Station_Name": "Dieburger Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "62",
+        "Endvorgaenge": "72"
+    },
+    {
+        "Station_ID": "250680",
+        "Station_Name": "Vilbeler Landstraße \/ Hanauer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "29",
+        "Endvorgaenge": "29"
+    },
+    {
+        "Station_ID": "250681",
+        "Station_Name": "Hanauer Landstraße \/ Cassellastraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "30",
+        "Endvorgaenge": "32"
+    },
+    {
+        "Station_ID": "250682",
+        "Station_Name": "Hanauer Landstraße \/ Haltestelle Hugo-Junkers-Str.",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "9",
+        "Endvorgaenge": "13"
+    },
+    {
+        "Station_ID": "250692",
+        "Station_Name": "Stichlingstraße \/ Speicherstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "293",
+        "Endvorgaenge": "297"
+    },
+    {
+        "Station_ID": "250694",
+        "Station_Name": "Markgrafenstraße \/ Leipziger Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "125",
+        "Endvorgaenge": "120"
+    },
+    {
+        "Station_ID": "250917",
+        "Station_Name": "Alfred-Brehm-Platz \/ Zoo Frankfurt",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "202",
+        "Endvorgaenge": "223"
+    },
+    {
+        "Station_ID": "250919",
+        "Station_Name": "Palmengartenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "126",
+        "Endvorgaenge": "123"
+    },
+    {
+        "Station_ID": "250920",
+        "Station_Name": "Gräfstraße \/ Falkstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "247",
+        "Endvorgaenge": "250"
+    },
+    {
+        "Station_ID": "250921",
+        "Station_Name": "Krifteler Straße \/ Lahnstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "169",
+        "Endvorgaenge": "181"
+    },
+    {
+        "Station_ID": "250931",
+        "Station_Name": "Albert-Blank-Straße \/ Straße zur Internationalen S",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "12",
+        "Endvorgaenge": "14"
+    },
+    {
+        "Station_ID": "250934",
+        "Station_Name": "Richard-Weidlich-Platz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "9",
+        "Endvorgaenge": "10"
+    },
+    {
+        "Station_ID": "250935",
+        "Station_Name": "Sindlinger Bahnstraße \/ Farbenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "2",
+        "Endvorgaenge": "2"
+    },
+    {
+        "Station_ID": "250937",
+        "Station_Name": "Eytelweinstraße \/ Hanauer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "165",
+        "Endvorgaenge": "171"
+    },
+    {
+        "Station_ID": "250938",
+        "Station_Name": "Ackermannstraße \/ Cordierstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "49",
+        "Endvorgaenge": "53"
+    },
+    {
+        "Station_ID": "250939",
+        "Station_Name": "Ackermannstraße \/ Kleyerstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "30",
+        "Endvorgaenge": "35"
+    },
+    {
+        "Station_ID": "250940",
+        "Station_Name": "Am Leonhardsbrunn \/ Frauenlobstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "61",
+        "Endvorgaenge": "57"
+    },
+    {
+        "Station_ID": "252139",
+        "Station_Name": "Hansaallee \/ Platenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "293",
+        "Endvorgaenge": "302"
+    },
+    {
+        "Station_ID": "252289",
+        "Station_Name": "Peter-Bied-Straße \/ Heimchenweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "7",
+        "Endvorgaenge": "8"
+    },
+    {
+        "Station_ID": "252291",
+        "Station_Name": "S-Bahn Station Farbwerke",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "0"
+    },
+    {
+        "Station_ID": "252292",
+        "Station_Name": "Bornheimer Landstraße \/ Bäckerweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "364",
+        "Endvorgaenge": "352"
+    },
+    {
+        "Station_ID": "252293",
+        "Station_Name": "Alt-Sossenheim \/ Westerwaldstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "18",
+        "Endvorgaenge": "24"
+    },
+    {
+        "Station_ID": "252294",
+        "Station_Name": "Kurmainzer Straße \/ Wilhelm-Beckel-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "16",
+        "Endvorgaenge": "15"
+    },
+    {
+        "Station_ID": "252295",
+        "Station_Name": "Dufourstraße \/ Dunantring",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "15",
+        "Endvorgaenge": "19"
+    },
+    {
+        "Station_ID": "252296",
+        "Station_Name": "Nieder Kirchweg \/ Mainzer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "16",
+        "Endvorgaenge": "18"
+    },
+    {
+        "Station_ID": "252297",
+        "Station_Name": "Dürkheimer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "6",
+        "Endvorgaenge": "10"
+    },
+    {
+        "Station_ID": "252298",
+        "Station_Name": "Birminghamstraße \/ Coventrystraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "31",
+        "Endvorgaenge": "34"
+    },
+    {
+        "Station_ID": "252299",
+        "Station_Name": "Philipp-Reis-Straße \/ Am Dammgraben",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "142",
+        "Endvorgaenge": "150"
+    },
+    {
+        "Station_ID": "252300",
+        "Station_Name": "Kleine Nelkenstraße \/ Praunheimer Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "27",
+        "Endvorgaenge": "28"
+    },
+    {
+        "Station_ID": "252301",
+        "Station_Name": "Am Schwalbenschwanz \/ Chamissostraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "14",
+        "Endvorgaenge": "15"
+    },
+    {
+        "Station_ID": "252302",
+        "Station_Name": "Wolfsgangstraße \/ Hammanstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "71",
+        "Endvorgaenge": "75"
+    },
+    {
+        "Station_ID": "252303",
+        "Station_Name": "Parlamentsstraße \/ Bornheimer Landwehr",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "18",
+        "Endvorgaenge": "18"
+    },
+    {
+        "Station_ID": "252304",
+        "Station_Name": "Goethestraße \/ Opernplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "568",
+        "Endvorgaenge": "619"
+    },
+    {
+        "Station_ID": "254278",
+        "Station_Name": "Rödelheimer Landstraße \/ Ludwig-Landmann-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "105",
+        "Endvorgaenge": "112"
+    },
+    {
+        "Station_ID": "254280",
+        "Station_Name": "S-Bahn Station Berkersheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "4",
+        "Endvorgaenge": "2"
+    },
+    {
+        "Station_ID": "254282",
+        "Station_Name": "Rechneigrabenstraße \/ Lange Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "76",
+        "Endvorgaenge": "77"
+    },
+    {
+        "Station_ID": "254283",
+        "Station_Name": "Hallenbad Höchst",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "6",
+        "Endvorgaenge": "7"
+    },
+    {
+        "Station_ID": "254285",
+        "Station_Name": "Röderbergweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "91",
+        "Endvorgaenge": "82"
+    },
+    {
+        "Station_ID": "254288",
+        "Station_Name": "Richard-Wagner-Straße \/ Brahmsstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "95",
+        "Endvorgaenge": "87"
+    },
+    {
+        "Station_ID": "254289",
+        "Station_Name": "Rohrbachstraße \/ Rothschildallee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "62",
+        "Endvorgaenge": "50"
+    },
+    {
+        "Station_ID": "254290",
+        "Station_Name": "Buchgasse \/ Limpurgergasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "64",
+        "Endvorgaenge": "84"
+    },
+    {
+        "Station_ID": "254291",
+        "Station_Name": "Idsteiner Straße \/ Eppenhainer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "132",
+        "Endvorgaenge": "135"
+    },
+    {
+        "Station_ID": "254293",
+        "Station_Name": "Idsteiner Straße \/ Schneidhainer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "25",
+        "Endvorgaenge": "19"
+    },
+    {
+        "Station_ID": "254294",
+        "Station_Name": "Allerheiligentor",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "71",
+        "Endvorgaenge": "75"
+    },
+    {
+        "Station_ID": "254295",
+        "Station_Name": "Zum Pfarrturm \/ Saalgasse",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "134",
+        "Endvorgaenge": "142"
+    },
+    {
+        "Station_ID": "254296",
+        "Station_Name": "Bleichstraße - Friedberger Tor",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "125",
+        "Endvorgaenge": "129"
+    },
+    {
+        "Station_ID": "254298",
+        "Station_Name": "Friedberger Landstraße \/ Vogelsbergstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "162",
+        "Endvorgaenge": "163"
+    },
+    {
+        "Station_ID": "254299",
+        "Station_Name": "Südbahnhof \/ Mörfelder Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "123",
+        "Endvorgaenge": "112"
+    },
+    {
+        "Station_ID": "254300",
+        "Station_Name": "Walter-Kolb-Straße \/ Laubestraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "168",
+        "Endvorgaenge": "162"
+    },
+    {
+        "Station_ID": "254302",
+        "Station_Name": "Wendelsplatz \/ Darmstädter Landstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "70",
+        "Endvorgaenge": "72"
+    },
+    {
+        "Station_ID": "254303",
+        "Station_Name": "Am Tiergarten \/ Maulbeerstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "45",
+        "Endvorgaenge": "44"
+    },
+    {
+        "Station_ID": "254307",
+        "Station_Name": "Zum Brommenhof \/ Gerbermühlstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "137",
+        "Endvorgaenge": "130"
+    },
+    {
+        "Station_ID": "254309",
+        "Station_Name": "Bahnhof Höchst Ausgang Süd",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "24",
+        "Endvorgaenge": "19"
+    },
+    {
+        "Station_ID": "254646",
+        "Station_Name": "Schloßstraße \/ Robert-Mayer-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "212",
+        "Endvorgaenge": "216"
+    },
+    {
+        "Station_ID": "254647",
+        "Station_Name": "Haardtwaldplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "66",
+        "Endvorgaenge": "64"
+    },
+    {
+        "Station_ID": "254649",
+        "Station_Name": "Bruchfeldplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "77",
+        "Endvorgaenge": "71"
+    },
+    {
+        "Station_ID": "254651",
+        "Station_Name": "Gerauer Straße \/ Güntherstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "102",
+        "Endvorgaenge": "121"
+    },
+    {
+        "Station_ID": "254652",
+        "Station_Name": "Bechtenwaldstraße \/ Hahnbergweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "1"
+    },
+    {
+        "Station_ID": "254653",
+        "Station_Name": "S-Bahn Station Zeilsheim",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "5",
+        "Endvorgaenge": "3"
+    },
+    {
+        "Station_ID": "254655",
+        "Station_Name": "Im Mainfeld",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "141",
+        "Endvorgaenge": "143"
+    },
+    {
+        "Station_ID": "254657",
+        "Station_Name": "Kelsterbacher Straße \/ Schwanheimer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "167",
+        "Endvorgaenge": "165"
+    },
+    {
+        "Station_ID": "254658",
+        "Station_Name": "Haltestelle Rennbahn",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "133",
+        "Endvorgaenge": "137"
+    },
+    {
+        "Station_ID": "254660",
+        "Station_Name": "Reichsforststraße \/ Waldstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "102",
+        "Endvorgaenge": "105"
+    },
+    {
+        "Station_ID": "254661",
+        "Station_Name": "Deutschordenstraße \/ Komturstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "66",
+        "Endvorgaenge": "70"
+    },
+    {
+        "Station_ID": "254662",
+        "Station_Name": "Seckbacher Landstraße \/ Weidenbornstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "82",
+        "Endvorgaenge": "78"
+    },
+    {
+        "Station_ID": "254950",
+        "Station_Name": "Industriepark Höchst Tor Ost",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "3",
+        "Endvorgaenge": "3"
+    },
+    {
+        "Station_ID": "255094",
+        "Station_Name": "Franklinstraße \/ Galvanistraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "206",
+        "Endvorgaenge": "209"
+    },
+    {
+        "Station_ID": "255095",
+        "Station_Name": "Bornheimer Landwehr \/ Wittelsbacherallee",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "79",
+        "Endvorgaenge": "74"
+    },
+    {
+        "Station_ID": "255731",
+        "Station_Name": "Schweizer Straße \/ Städelstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "275",
+        "Endvorgaenge": "294"
+    },
+    {
+        "Station_ID": "255734",
+        "Station_Name": "Hanauer Landstraße 334",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "28",
+        "Endvorgaenge": "20"
+    },
+    {
+        "Station_ID": "256115",
+        "Station_Name": "S-Bahn Station Frankfurter Berg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "29",
+        "Endvorgaenge": "34"
+    },
+    {
+        "Station_ID": "256196",
+        "Station_Name": "Stralsunder Straße 34",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "133",
+        "Endvorgaenge": "127"
+    },
+    {
+        "Station_ID": "256368",
+        "Station_Name": "Hofstraße 5",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "78",
+        "Endvorgaenge": "73"
+    },
+    {
+        "Station_ID": "257268",
+        "Station_Name": "Ludwigstraße \/ Niddastraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "1013",
+        "Endvorgaenge": "827"
+    },
+    {
+        "Station_ID": "257272",
+        "Station_Name": "Mörfelder Landstraße \/ Riedhofweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "66",
+        "Endvorgaenge": "67"
+    },
+    {
+        "Station_ID": "257273",
+        "Station_Name": "Schwarzwaldstraße \/ Neuwiesenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "26",
+        "Endvorgaenge": "26"
+    },
+    {
+        "Station_ID": "257274",
+        "Station_Name": "Sachsenhäuser Landwehrweg \/ Boehlepark",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "9",
+        "Endvorgaenge": "8"
+    },
+    {
+        "Station_ID": "257275",
+        "Station_Name": "Hainer Weg \/ Scholdererweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "20",
+        "Endvorgaenge": "21"
+    },
+    {
+        "Station_ID": "257332",
+        "Station_Name": "Engelsruhe \/ Gotenstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "19",
+        "Endvorgaenge": "20"
+    },
+    {
+        "Station_ID": "257333",
+        "Station_Name": "Hans-Böckler-Straße \/ Geißspitzweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "10",
+        "Endvorgaenge": "12"
+    },
+    {
+        "Station_ID": "257334",
+        "Station_Name": "Sternstraße \/ Unterweg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "163",
+        "Endvorgaenge": "165"
+    },
+    {
+        "Station_ID": "257341",
+        "Station_Name": "Hügelstraße \/ Wilhelm-Busch-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "46",
+        "Endvorgaenge": "47"
+    },
+    {
+        "Station_ID": "257343",
+        "Station_Name": "Nußzeil \/ Josephskirchstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "36",
+        "Endvorgaenge": "34"
+    },
+    {
+        "Station_ID": "258595",
+        "Station_Name": "Mainkai \/ Am Hafendeck",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "123",
+        "Endvorgaenge": "165"
+    },
+    {
+        "Station_ID": "258992",
+        "Station_Name": "Ledermuseum\/Berliner Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "163",
+        "Endvorgaenge": "172"
+    },
+    {
+        "Station_ID": "258993",
+        "Station_Name": "Rathaus\/Berliner Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "92",
+        "Endvorgaenge": "99"
+    },
+    {
+        "Station_ID": "258994",
+        "Station_Name": "Berliner Straße\/Marktplatz",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "109",
+        "Endvorgaenge": "129"
+    },
+    {
+        "Station_ID": "258995",
+        "Station_Name": "Kaiserstraße\/Bismarckstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "79",
+        "Endvorgaenge": "64"
+    },
+    {
+        "Station_ID": "258996",
+        "Station_Name": "Starkenburgring\/Klinikum Offenbach",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "66",
+        "Endvorgaenge": "79"
+    },
+    {
+        "Station_ID": "258998",
+        "Station_Name": "Bahnhof Offenbach Ost\/Lämmerspieler Weg",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "32",
+        "Endvorgaenge": "34"
+    },
+    {
+        "Station_ID": "258999",
+        "Station_Name": "Anhalter Straße \/ Rumpenheimer Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "15",
+        "Endvorgaenge": "18"
+    },
+    {
+        "Station_ID": "259000",
+        "Station_Name": "Brunnenweg\/Wilhelm-Schramm-Straße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "5",
+        "Endvorgaenge": "10"
+    },
+    {
+        "Station_ID": "259001",
+        "Station_Name": "Bahnhof Bieber \/ Poststraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "12",
+        "Endvorgaenge": "14"
+    },
+    {
+        "Station_ID": "270558",
+        "Station_Name": "Emil-Sulzbach Straße \/ Robert-Mayer Straße",
+        "Latitude": "0.0000000",
+        "Longitude": "0.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "0"
+    },
+    {
+        "Station_ID": "270559",
+        "Station_Name": "Emil-Sulzbach Straße \/ Robert-Mayer Straße",
+        "Latitude": "0.0000000",
+        "Longitude": "0.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "0"
+    },
+    {
+        "Station_ID": "272652",
+        "Station_Name": "Niddastraße \/ Weserstraße",
+        "Latitude": "50.0000000",
+        "Longitude": "8.0000000",
+        "Startvorgaenge": "0",
+        "Endvorgaenge": "0"
+    }
+]
