@@ -24,6 +24,7 @@ try {
     if ($conn instanceof mysqli) {
         echo "Die Verbindung wurde erfolgreich hergestellt!";
     } else {
+        var_dump(http_response_code(503));
         echo "Fehler beim Herstellen der Verbindung.";
     }
     
@@ -95,8 +96,8 @@ try {
             $Station_Name = $data[$headerMap['Station-Name']];
 
             // Hier die Werte für Latitude und Longitude tauschen
-            $Longitude = str_replace(',', '.', $data[$headerMap['Lat']]); // Convert ',' to '.'
-            $Latitude = str_replace(',', '.', $data[$headerMap['Long']]); // Convert ',' to '.'
+            $Longitude = str_replace(',', '.', $data[$headerMap['Long']]); // Convert ',' to '.'
+            $Latitude = str_replace(',', '.', $data[$headerMap['Lat']]); // Convert ',' to '.'
 
             $Startvorgaenge = $data[$headerMap['Startvorgänge']];
             $Endvorgaenge = $data[$headerMap['Endvorgänge']];
@@ -145,15 +146,16 @@ try {
             $Start_Station_ID = $data[$headerMap['Start-Station-ID']];
 
             // Hier die Start-Koordinaten tauschen
-            $Start_Longitude = $data[$headerMap['Start-Lat']]; // 'Start-Lat' enthält Longitudewert
-            $Start_Latitude = $data[$headerMap['Start-Long']]; // 'Start-Long' enthält Latitudewert
+            
+            $Start_Longitude = str_replace(',', '.', $data[$headerMap['Start-Lat']]); // 'Start-Lat' enthält Longitudewert
+            $Start_Latitude = str_replace(',', '.', $data[$headerMap['Start-Long']]); // 'Start-Long' enthält Latitudewert
 
             $Ende_Station = $data[$headerMap['Ende-Station']];
             $Ende_Station_ID = $data[$headerMap['Ende-Station-ID']];
 
             // Hier die End-Koordinaten tauschen
-            $Ende_Longitude = $data[$headerMap['Ende-Lat']]; // 'Ende-Lat' enthält Longitudewert
-            $Ende_Latitude = $data[$headerMap['Ende-Long']]; // 'Ende-Long' enthält Latitudewert
+            $Ende_Longitude = str_replace(',', '.', $data[$headerMap['Ende-Long']]); // 'Ende-Lat' enthält Longitudewert
+            $Ende_Latitude = str_replace(',', '.', $data[$headerMap['Ende-Lat']]); // 'Ende-Long' enthält Latitudewert
 
             $Buchungsportal = $data[$headerMap['Buchungsportal']];
             $Wochentag = $data[$headerMap['Wochentag']];
@@ -173,5 +175,6 @@ try {
     echo "Daten wurden erfolgreich importiert.";
 } catch (mysqli_sql_exception $e) {
     echo "Fatal Error: " . $e->getMessage();
+    var_dump(http_response_code(404));
 }
 ?>

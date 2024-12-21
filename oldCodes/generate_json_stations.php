@@ -16,9 +16,7 @@ $sql = "SELECT Station_ID, Station_Name, Latitude, Longitude, Startvorgaenge, En
 // Execute the query and fetch results
 $result = $conn->query($sql);
 
-// Initialize an array to hold the station data
 $stations = [];
-
 if ($result && $result->num_rows > 0) {
     // Loop through each row and add it to the array
     while ($row = $result->fetch_assoc()) {
@@ -32,7 +30,6 @@ if ($result && $result->num_rows > 0) {
 // Convert the data to JSON format
 $jsonData = json_encode($stations, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-// Define the path for the JSON file
 $jsonFilePath = "./json/stations.json";
 
 // Save the JSON data to the file
