@@ -96,8 +96,8 @@ try {
             $Station_Name = $data[$headerMap['Station-Name']];
 
             // Hier die Werte für Latitude und Longitude tauschen
-            $Longitude = str_replace(',', '.', $data[$headerMap['Long']]); // Convert ',' to '.'
-            $Latitude = str_replace(',', '.', $data[$headerMap['Lat']]); // Convert ',' to '.'
+            $Latitude = str_replace(',', '.', $data[$headerMap['Long']]); // Convert ',' to '.'
+            $Longitude = str_replace(',', '.', $data[$headerMap['Lat']]); // Convert ',' to '.'
 
             $Startvorgaenge = $data[$headerMap['Startvorgänge']];
             $Endvorgaenge = $data[$headerMap['Endvorgänge']];
