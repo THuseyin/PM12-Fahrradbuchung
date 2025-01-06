@@ -90,57 +90,61 @@ function loadStationData(filters) {
 function processStationData(data) {
     const bookingType = document.querySelector('input[name="booking-type"]:checked').value;
     const stationCounts = {};
-
+  
     data.forEach(route => {
       let stationId;
       let latitude;
       let longitude;
-
+      let stationName;
+  
       if (bookingType === "start") {
         stationId = route.Start_Station_ID;
         latitude = route.Start_Latitude;
         longitude = route.Start_Longitude;
-
-      } else if(bookingType === "end") {
-          stationId = route.Ende_Station_ID;
-          latitude = route.Ende_Latitude;
-          longitude = route.Ende_Longitude;
-
+        stationName = route.Start_Station;
+      } else if (bookingType === "end") {
+        stationId = route.End_Station_ID;
+        latitude = route.Ende_Latitude;
+        longitude = route.Ende_Longitude;
+        stationName = route.End_Station;
       }
-      
+  
       if (stationCounts[stationId]) {
-        stationCounts[stationId].count++;
-        stationCounts[stationId].latitude = latitude;
-        stationCounts[stationId].longitude = longitude;
-      } else {
-        stationCounts[stationId] = { count: 1 ,latitude: latitude, longitude: longitude};
+          stationCounts[stationId].count++;
+          stationCounts[stationId].latitude = latitude;
+          stationCounts[stationId].longitude = longitude;
+          stationCounts[stationId].stationName = stationName;
+        } else {
+            stationCounts[stationId] = { count: 1, latitude: latitude, longitude: longitude, stationName: stationName};
       }
-    });
-
-   // Prepare transactions array
+  });
+  
+  
     const transactions = Object.values(stationCounts).map(station => station.count);
-    
     const sortedTransactions = [...transactions].sort((a, b) => b - a);
     const top20 = sortedTransactions.slice(0, 20);
     const bottom20 = sortedTransactions.slice(-20);
     clearLayers();
-
-
-   for (const stationId in stationCounts) {
-        const station = stationCounts[stationId];
-        let markerIcon = yellowMarker;
-        if (top20.includes(station.count)) {
-             markerIcon = redMarker;
-       } else if (bottom20.includes(station.count)) {
-           markerIcon = greenMarker;
+  
+  
+    for (const stationId in stationCounts) {
+      const station = stationCounts[stationId];
+      let markerIcon = yellowMarker;
+      if (top20.includes(station.count)) {
+        markerIcon = redMarker;
+      } else if (bottom20.includes(station.count)) {
+        markerIcon = greenMarker;
       }
-
-       L.marker([station.latitude, station.longitude], { icon: markerIcon })
-              .bindPopup(`<b>Station ID: ${stationId}</b><br>Transactions: ${station.count}`)
-              .addTo(markerIcon === redMarker ? AboveAvarageDensityLayer : (markerIcon === greenMarker ? UnderAvarageDensityLayer : AboutAvarageDensityLayer));
-
-    }
-}
+      const popupContent = `<b>Station Name:</b> ${station.stationName}<br>
+                           <b>Station ID:</b> ${stationId}<br>
+                           <b>Transactions:</b> ${station.count}`;
+  
+      L.marker([station.latitude, station.longitude], { icon: markerIcon })
+            .bindPopup(popupContent)
+            .addTo(markerIcon === redMarker ? AboveAvarageDensityLayer : (markerIcon === greenMarker ? UnderAvarageDensityLayer : AboutAvarageDensityLayer));
+  
+      }
+  }
 
 
 function calculateAverage(arr) {
