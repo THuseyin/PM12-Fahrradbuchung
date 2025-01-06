@@ -1,0 +1,24 @@
+[06-Jan-2025 22:01:06 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AND Wochentag IN (?,?,?,?,?,?,?)' at line 1 in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php:44
+Stack trace:
+#0 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(44): mysqli->prepare('SELECT * FROM r...')
+#1 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(118): fetchFilteredData(Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php on line 44
+[06-Jan-2025 22:01:32 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AND Wochentag IN (?,?,?,?,?,?,?)' at line 1 in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php:44
+Stack trace:
+#0 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(44): mysqli->prepare('SELECT * FROM r...')
+#1 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(118): fetchFilteredData(Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php on line 44
+[06-Jan-2025 22:01:38 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AND Wochentag IN (?,?,?,?,?,?,?)' at line 1 in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php:44
+Stack trace:
+#0 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(44): mysqli->prepare('SELECT * FROM r...')
+#1 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(118): fetchFilteredData(Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php on line 44
+[06-Jan-2025 22:03:06 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AND Wochentag IN (?,?,?,?,?,?,?)' at line 1 in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php:44
+Stack trace:
+#0 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(44): mysqli->prepare('SELECT * FROM r...')
+#1 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(118): fetchFilteredData(Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php on line 44

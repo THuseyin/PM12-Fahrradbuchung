@@ -147,15 +147,15 @@ try {
 
             // Hier die Start-Koordinaten tauschen
             
-            $Start_Longitude = str_replace(',', '.', $data[$headerMap['Start-Lat']]); // 'Start-Lat' enthält Longitudewert
-            $Start_Latitude = str_replace(',', '.', $data[$headerMap['Start-Long']]); // 'Start-Long' enthält Latitudewert
+            $Start_Latitude = str_replace(',', '.', $data[$headerMap['Start-Long']]); // 'Start-Lat' enthält Longitudewert
+            $Start_Longitude = str_replace(',', '.', $data[$headerMap['Start-Lat']]); // 'Start-Long' enthält Latitudewert
 
             $Ende_Station = $data[$headerMap['Ende-Station']];
             $Ende_Station_ID = $data[$headerMap['Ende-Station-ID']];
 
             // Hier die End-Koordinaten tauschen
-            $Ende_Longitude = str_replace(',', '.', $data[$headerMap['Ende-Long']]); // 'Ende-Lat' enthält Longitudewert
-            $Ende_Latitude = str_replace(',', '.', $data[$headerMap['Ende-Lat']]); // 'Ende-Long' enthält Latitudewert
+            $Ende_Longitude = str_replace(',', '.', $data[$headerMap['Ende-Lat']]); // 'Ende-Lat' enthält Longitudewert
+            $Ende_Latitude = str_replace(',', '.', $data[$headerMap['Ende-Long']]); // 'Ende-Long' enthält Latitudewert
 
             $Buchungsportal = $data[$headerMap['Buchungsportal']];
             $Wochentag = $data[$headerMap['Wochentag']];

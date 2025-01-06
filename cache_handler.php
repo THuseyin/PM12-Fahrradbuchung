@@ -1,17 +1,16 @@
 <?php
-//Handles data caching and refreshes if needed
-
 header('Content-Type: application/json');
 
-$stationsCacheFilePath = './json/stations.json';
+$stationsCacheFilePath = './json/routes.json'; // Cache file for the routes data
 $cacheExpiryTime = 60 * 60; // 1 hour in seconds
 
-// Function to fetch fresh data from the database
-function fetchFreshData() {
-    
-    // Connect to the database
-    $connection = include("dbcon.php");
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+error_reporting(E_ALL);
 
+function fetchFilteredData($filters) {
+    $connection = include("dbcon.php");
     if (!$connection) {
         http_response_code(500);
         echo json_encode(["error" => "Database connection error: " . mysqli_connect_error()]);
@@ -19,60 +18,113 @@ function fetchFreshData() {
     }
     $connection->set_charset("utf8mb4");
 
-    // Query the database
-    $query = "SELECT Station_ID, Station_Name, Latitude, Longitude, Startvorgaenge, Endvorgaenge FROM stations";
-    $result = $connection->query($query);
+    // Base SQL query
+     $query = "SELECT * FROM routes WHERE 1=1";
 
-    if (!$result) {
+    // Add filters to the query
+    $params = [];
+    $types = "";
+    
+    // Handle Booking Portals
+    if(isset($filters['portals']) && is_array($filters['portals'])){
+        $placeholders = implode(',', array_fill(0, count($filters['portals']), '?'));
+        $query .= " AND Buchungsportal IN ($placeholders)";
+        $params = array_merge($params, $filters['portals']);
+        $types .= str_repeat('s', count($filters['portals']));
+    }
+    
+    // Handle Days of the Week
+    if(isset($filters['days']) && is_array($filters['days'])){
+        $placeholders = implode(',', array_fill(0, count($filters['days']), '?'));
+        $query .= " AND Wochentag IN ($placeholders)";
+        $params = array_merge($params, $filters['days']);
+        $types .= str_repeat('s', count($filters['days']));
+    }
+    
+    $stmt = $connection->prepare($query);
+
+    if (!$stmt) {
+        $error = "Database query prepare error: " . $connection->error;
         http_response_code(500);
-        echo json_encode(["error" => "Database query error: " . mysqli_error($connection)]);
-        $connection->close();
+        echo json_encode(["error" => $error]);
+         $connection->close();
         exit;
     }
-
-    $data = [];
-    if ($result && $result->num_rows > 0) {
-        // Loop through each row and add it to the array
-        while ($row = $result->fetch_assoc()) {
-            $data[] = $row;
-        }
-    } else {
-        echo "No data found in the 'stations' table.";
-        exit; // Exit if there are no results
+    
+    if(!empty($params)) {
+         $stmt->bind_param($types, ...$params);
     }
 
+    if (!$stmt->execute()) {
+         $error = "Statement execution error: " . $stmt->error;
+          http_response_code(500);
+          echo json_encode(["error" => $error]);
+           $stmt->close();
+          $connection->close();
+          exit;
+    }
 
-    // Free result and close connection
+    $result = $stmt->get_result();
+
+    $data = [];
+    if ($result) {
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                 $data[] = $row;
+            }
+        }
+        else {
+            // Check column names directly from the result metadata
+            $fields = $result->fetch_fields();
+            $columnNames = [];
+            if($fields){
+              foreach ($fields as $field) {
+                $columnNames[] = $field->name;
+              }
+            }
+           
+            $error = "No data found in the 'routes' table. Available columns: " . implode(", ", $columnNames);
+            $data = ["error" => $error];
+
+        }
+    } else {
+         $error = "Error getting result" ;
+           $data = ["error" => $error];
+    }
+   
+    $stmt->close();
     $connection->close();
     return $data;
 }
 
-// Check if the cache file exists
 if (file_exists($stationsCacheFilePath)) {
     $cacheContent = json_decode(file_get_contents($stationsCacheFilePath), true);
+   
+    if (isset($cacheContent['timestamp'], $cacheContent['data']) && isset($_GET['filters'])) {
+         $cacheAge = time() - $cacheContent['timestamp'];
+        $receivedFilters = json_decode($_GET['filters'], true);
+        $cachedFilters = isset($cacheContent['filters']) ? $cacheContent['filters'] : [];
 
-    if (isset($cacheContent['timestamp'], $cacheContent['data'])) {
-        $cacheAge = time() - $cacheContent['timestamp'];
-
-        // Check if cache is still valid
-        if ($cacheAge < $cacheExpiryTime) {
+        if ($cacheAge < $cacheExpiryTime && $receivedFilters == $cachedFilters) {
             echo json_encode($cacheContent['data']);
             exit;
         }
     }
 }
 
-// If no valid cache, fetch fresh data
-$data = fetchFreshData();
+// Retrieve filters from GET request
+$filters = isset($_GET['filters']) ? json_decode($_GET['filters'], true) : [];
 
-// Save new data to cache
+$data = fetchFilteredData($filters);
+
+
 $cacheData = [
     'timestamp' => time(),
+    'filters' => $filters,
     'data' => $data
 ];
 
 file_put_contents($stationsCacheFilePath, json_encode($cacheData, JSON_PRETTY_PRINT));
 
-// Return the fresh data
 echo json_encode($data);
 ?>

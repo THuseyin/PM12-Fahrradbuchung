@@ -56,25 +56,25 @@
                 <legend>Second Visualization</legend>
                 <h4>Days of the Week</h4>
                 <label>
-                    <input type="checkbox" name="days[]" value="Monday" checked> Monday
+                    <input type="checkbox" name="days[]" value="Mo" checked> Monday
                 </label>
                 <label>
-                    <input type="checkbox" name="days[]" value="Tuesday" checked> Tuesday
+                    <input type="checkbox" name="days[]" value="Di" checked> Tuesday
                 </label>
                 <label>
-                    <input type="checkbox" name="days[]" value="Wednesday" checked> Wednesday
+                    <input type="checkbox" name="days[]" value="Mi" checked> Wednesday
                 </label>
                 <label>
-                    <input type="checkbox" name="days[]" value="Thursday" checked> Thursday
+                    <input type="checkbox" name="days[]" value="Do" checked> Thursday
                 </label>
                 <label>
-                    <input type="checkbox" name="days[]" value="Friday" checked> Friday
+                    <input type="checkbox" name="days[]" value="Fr" checked> Friday
                 </label>
                 <label>
-                    <input type="checkbox" name="days[]" value="Saturday" checked> Saturday
+                    <input type="checkbox" name="days[]" value="Sa" checked> Saturday
                 </label>
                 <label>
-                    <input type="checkbox" name="days[]" value="Sunday" checked> Sunday
+                    <input type="checkbox" name="days[]" value="So" checked> Sunday
                 </label>
             </fieldset>
 
