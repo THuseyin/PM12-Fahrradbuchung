@@ -1,31 +1,91 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    line-height: 1.6;
 }
 
-header, footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* Container for Map and Filters */
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
 }
 
+/* Map Area */
 #map {
-    height: 400px;
-    width: 100%;
-    margin: 0 0;
+    flex: 1 1 60%; /* Take up 60% width */
+    min-height: 100%;
 }
 
-form {
-    margin: 20px;
+/* Filter Sidebar */
+.filters-container {
+    flex: 1 1 40%; /* Take up 40% width */
+    padding: 20px;
+    background-color: white;
+    border-left: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow-y: auto; /* Scroll if content overflows */
+    height: 100%; /* Make sure it always fills the height */
+}
+
+
+.filters-container h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.filters-container fieldset {
+    margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    max-width: 400px;
 }
 
-form label {
-    display: block;
-    margin: 5px 0;
+.filters-container legend {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 5px;
+    background-color: white;
 }
+
+.filters-container h4 {
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.filters-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.filters-container input[type="radio"],
+.filters-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  #refresh-database {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #refresh-database:hover {
+    background-color: #2980b9;
+  }

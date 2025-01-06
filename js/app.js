@@ -103,10 +103,10 @@ function processStationData(data) {
         longitude = route.Start_Longitude;
         stationName = route.Start_Station;
       } else if (bookingType === "end") {
-        stationId = route.End_Station_ID;
+        stationId = route.Ende_Station_ID;
         latitude = route.Ende_Latitude;
         longitude = route.Ende_Longitude;
-        stationName = route.End_Station;
+        stationName = route.Ende_Station;
       }
   
       if (stationCounts[stationId]) {
