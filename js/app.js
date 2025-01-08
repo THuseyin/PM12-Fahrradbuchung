@@ -163,3 +163,41 @@ function clearLayers() {
     UnderAvarageDensityLayer.clearLayers();
     AboutAvarageDensityLayer.clearLayers();
 }
+
+let searchMarker; // Variable für den Such-Marker
+
+// Event Listener für die Adresssuche
+document.getElementById('search-button').addEventListener('click', async () => {
+    const address = document.getElementById('address-input').value;
+
+    if (!address) {
+        alert('Bitte eine Adresse eingeben.');
+        return;
+    }
+
+    try {
+        // Anfrage an Nominatim API senden
+        const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`);
+        const data = await response.json();
+
+        if (data.length === 0) {
+            alert('Adresse nicht gefunden.');
+            return;
+        }
+
+        // Die erste Adresse aus den Ergebnissen verwenden
+        const { lat, lon, display_name } = data[0];
+
+        // Karte zentrieren
+        map.setView([lat, lon], 16);
+
+        // Neuen Marker hinzufügen
+        searchMarker = L.marker([lat, lon])
+            .addTo(map)
+            .bindPopup(display_name)
+            .openPopup();
+
+    } catch (error) {
+        console.error('Fehler beim Abrufen der Adresse:', error);
+    }
+});

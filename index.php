@@ -84,6 +84,11 @@
 
     <script type="module" src="js/app.js"></script>
 
+    <div id="address-search">
+    <input type="text" id="address-input" placeholder="Adresse eingeben">
+    <button type="button" id="search-button">Suche</button>
+</div>
+
 </body>
 
 </html>
