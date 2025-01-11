@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ecf0f1;
+    background-color: #3d74df;
     color: #2c3e50;
     line-height: 1.6;
 }
@@ -11,40 +11,155 @@ body {
 /* Container for Map and Filters */
 .container {
     display: flex;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    /* Full viewport height */
 }
 
 /* Map Area */
 #map {
-    flex: 1 1 60%; /* Take up 60% width */
+    flex: 1;
+    /* Take up all available space */
     min-height: 100%;
+    z-index: 1;
+    /* Ensure the map is behind the overlay */
 }
 
-/* Filter Sidebar */
-.filters-container {
-    flex: 1 1 40%; /* Take up 40% width */
-    padding: 20px;
-    background-color: white;
-    border-left: 1px solid #ddd;
+/* Overlay for Filters */
+.filters-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    /* Adjust width as needed */
+    height: 17vh;
+    /* Set height to 17% of viewport height */
+    background-color: rgba(255, 184, 77, 0.8);
+    /* #ffb84d with opacity */
+    padding: 10px;
     box-sizing: border-box;
-    overflow-y: auto; /* Scroll if content overflows */
-    height: 100%; /* Make sure it always fills the height */
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
 }
-
-
-.filters-container h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    margin-bottom: 20px;
+/*Station Panel*/
+.station-panel {
+    position: absolute;
+    left: -20%; /* Initially hidden off-screen */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 20%; /* Adjusted width to 20% */
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: left 0.3s ease;
+}
+.station-panel.active{
+    left: 0; /* Slide in when active */
+}
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
+.panel-header h3{
+    font-size: 1.2em;
+    margin: 0;
+}
 
-.filters-container fieldset {
-    margin-bottom: 20px;
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.panel-content{
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Filter Container */
+.filters-container {
+    width: 100%;
+    /* Take up 100% of overlay width */
+    max-width: 1400px;
+    /* Limit width for large screens */
+    background-color: transparent;
+    /* remove default background */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: flex-start;
+    /* Align items to the start for search field and dropdowns */
     padding: 10px;
-    border: 1px solid #ddd;
+}
+
+/* Search Field */
+.search-container {
+    flex: 0 0 40%;
+    /* Take up 40% of the width, don't grow or shrink */
+    display: flex;
+    align-items: center;
+    /* align items vertically within the container */
+}
+
+#search-input {
+    margin-right: 15px;
+    /* Space between search and other elements */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Take full width of search-container*/
+}
+
+/* Form Layout Columns */
+#visualization-filters {
+    display: flex;
+}
+
+.form-column {
+    flex: 1;
+    padding-right: 10px;
+}
+
+/* Booking Type Radio Buttons */
+.booking-type-options label {
+    display: block;
+    /* make radio buttons on separate lines*/
+    margin-bottom: 5px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
     border-radius: 5px;
+}
+
+/* Booking Type Radio Buttons */
+.booking-type-options {
+    margin-right: 10px;
+    /*Give a small space between groups */
+}
+
+/* Dropdown Group Container for horizontal alignment */
+.dropdown-group {
+    display: flex;
+    margin-right: auto;
+    /* Push refresh button to the right */
 }
 
 .filters-container legend {
@@ -54,29 +169,15 @@ body {
     background-color: white;
 }
 
-.filters-container h4 {
-    margin-bottom: 5px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.filters-container label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-}
-
-.filters-container input[type="radio"],
-.filters-container input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.button-container{
+.button-container {
     display: flex;
-    justify-content: center;
-    margin: 10px 0;
-  }
-  
-  #refresh-database {
+    justify-content: flex-end;
+    /* Align button to the right */
+    margin-left: 15px;
+    /* Space between filters and button */
+}
+
+#refresh-database {
     background-color: #3498db;
     color: white;
     border: none;
@@ -84,8 +185,60 @@ body {
     padding: 8px 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  #refresh-database:hover {
+}
+
+#refresh-database:hover {
     background-color: #2980b9;
-  }
+}
+
+/* Dropdown Styles */
+.dropdown {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.dropdown-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    pointer-events: none;
+    /* Disable button clicks */
+    width: 180px;
+    /* Set the width of the button */
+    text-align: left;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.dropdown-button:hover {
+    background-color: #2980b9;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    /* Match the width of the button */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+    bottom: 100%;
+    left: 0;
+    transform: translateY(0px);
+    /*Moves drop down to the same line with button*/
+}
+
+.dropdown-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

@@ -1,0 +1,56 @@
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=26868 in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php:7
+Stack trace:
+#0 C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php(7): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'callabiketeam12')
+#1 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(13): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(118): fetchFilteredData(Array)
+#3 {main}
+  thrown in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php:7
+Stack trace:
+#0 C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php(7): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'callabiketeam12')
+#1 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(13): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(118): fetchFilteredData(Array)
+#3 {main}
+  thrown in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:15:45 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\PM12-Fahrradbuchung\dbcon.php on line 7
+[11-Jan-2025 16:41:41 Europe/Berlin] PHP Warning:  Undefined array key "stationID" in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php on line 104
+[11-Jan-2025 16:42:15 Europe/Berlin] PHP Warning:  Undefined array key "stationID" in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php on line 104
+[11-Jan-2025 22:16:23 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AND Wochentag IN (?,?,?,?,?,?,?)' at line 1 in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php:39
+Stack trace:
+#0 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(39): mysqli->prepare('SELECT * FROM r...')
+#1 C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php(80): fetchFilteredData(Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\PM12-Fahrradbuchung\cache_handler.php on line 39

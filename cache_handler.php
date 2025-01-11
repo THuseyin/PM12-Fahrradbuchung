@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
-$stationsCacheFilePath = './json/routes.json'; // Cache file for the routes data
-$cacheExpiryTime = 60 * 60; // 1 hour in seconds
+$stationsCacheFilePath = './json/routes.json';
+$cacheExpiryTime = 60 * 60;
 
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -18,80 +18,41 @@ function fetchFilteredData($filters) {
     }
     $connection->set_charset("utf8mb4");
 
-    // Base SQL query
-     $query = "SELECT * FROM routes WHERE 1=1";
-
-    // Add filters to the query
+    $query = "SELECT * FROM routes WHERE 1=1";
     $params = [];
     $types = "";
-    
-    // Handle Booking Portals
-    if(isset($filters['portals']) && is_array($filters['portals'])){
+
+    if (isset($filters['portals']) && is_array($filters['portals'])) {
         $placeholders = implode(',', array_fill(0, count($filters['portals']), '?'));
         $query .= " AND Buchungsportal IN ($placeholders)";
         $params = array_merge($params, $filters['portals']);
         $types .= str_repeat('s', count($filters['portals']));
     }
-    
-    // Handle Days of the Week
-    if(isset($filters['days']) && is_array($filters['days'])){
+
+    if (isset($filters['days']) && is_array($filters['days'])) {
         $placeholders = implode(',', array_fill(0, count($filters['days']), '?'));
         $query .= " AND Wochentag IN ($placeholders)";
         $params = array_merge($params, $filters['days']);
         $types .= str_repeat('s', count($filters['days']));
     }
-    
-    $stmt = $connection->prepare($query);
 
+    $stmt = $connection->prepare($query);
     if (!$stmt) {
-        $error = "Database query prepare error: " . $connection->error;
-        http_response_code(500);
-        echo json_encode(["error" => $error]);
-         $connection->close();
+        echo json_encode(["error" => "Query preparation failed: " . $connection->error]);
         exit;
     }
-    
-    if(!empty($params)) {
-         $stmt->bind_param($types, ...$params);
+
+    if (!empty($params)) {
+        $stmt->bind_param($types, ...$params);
     }
 
     if (!$stmt->execute()) {
-         $error = "Statement execution error: " . $stmt->error;
-          http_response_code(500);
-          echo json_encode(["error" => $error]);
-           $stmt->close();
-          $connection->close();
-          exit;
+        echo json_encode(["error" => "Query execution failed: " . $stmt->error]);
+        exit;
     }
 
     $result = $stmt->get_result();
-
-    $data = [];
-    if ($result) {
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                 $data[] = $row;
-            }
-        }
-        else {
-            // Check column names directly from the result metadata
-            $fields = $result->fetch_fields();
-            $columnNames = [];
-            if($fields){
-              foreach ($fields as $field) {
-                $columnNames[] = $field->name;
-              }
-            }
-           
-            $error = "No data found in the 'routes' table. Available columns: " . implode(", ", $columnNames);
-            $data = ["error" => $error];
-
-        }
-    } else {
-         $error = "Error getting result" ;
-           $data = ["error" => $error];
-    }
-   
+    $data = $result->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
     $connection->close();
     return $data;
@@ -99,24 +60,29 @@ function fetchFilteredData($filters) {
 
 if (file_exists($stationsCacheFilePath)) {
     $cacheContent = json_decode(file_get_contents($stationsCacheFilePath), true);
-   
     if (isset($cacheContent['timestamp'], $cacheContent['data']) && isset($_GET['filters'])) {
-         $cacheAge = time() - $cacheContent['timestamp'];
+        $cacheAge = time() - $cacheContent['timestamp'];
         $receivedFilters = json_decode($_GET['filters'], true);
-        $cachedFilters = isset($cacheContent['filters']) ? $cacheContent['filters'] : [];
+        $cachedFilters = $cacheContent['filters'] ?? [];
+        $receivedStationID = $_GET['stationID'] ?? null;
 
-        if ($cacheAge < $cacheExpiryTime && $receivedFilters == $cachedFilters) {
+        if ($cacheAge < $cacheExpiryTime && $receivedFilters == $cachedFilters && $receivedStationID == ($cacheContent['stationID'] ?? null)) {
             echo json_encode($cacheContent['data']);
             exit;
         }
     }
 }
 
-// Retrieve filters from GET request
 $filters = isset($_GET['filters']) ? json_decode($_GET['filters'], true) : [];
+$stationID = $_GET['stationID'] ?? null;
 
+// Fetch data: if stationID is empty, fetch all data
 $data = fetchFilteredData($filters);
 
+// If no stationID is provided, fetch all routes
+if (empty($stationID)) {
+    $data = fetchFilteredData($filters);
+}
 
 $cacheData = [
     'timestamp' => time(),
