@@ -46,14 +46,16 @@ body {
     align-items: center;
     /* Center content vertically */
 }
+
 /*Station Panel*/
 .station-panel {
     position: absolute;
     left: -20%;
     /* Initially hidden off-screen */
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
-    height: 50%;
+    height: 70%;
+    /* Adjusted height to 50% of the screen */
     width: 20%;
     /* Adjusted width to 20% */
     background-color: white;
@@ -99,6 +101,12 @@ body {
     overflow-y: auto;
 }
 
+.panel-content p {
+    font-size: 10px;
+    line-height: 0.5;
+}
+
+
 /* Filter Container */
 .filters-container {
     width: 100%;
@@ -140,13 +148,15 @@ body {
     background-color: #3498db;
     color: white;
     border: none;
-     border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
     padding: 8px 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-     margin-left: -4px; /* To be flush with input */
-     height: 37px;
-    width: 40px; /* Adjust as needed */
+    margin-left: -4px;
+    /* To be flush with input */
+    height: 37px;
+    width: 40px;
+    /* Adjust as needed */
     text-align: center;
     display: flex;
     align-items: center;
@@ -156,6 +166,7 @@ body {
 #search-button:hover {
     background-color: #2980b9;
 }
+
 /* Form Layout Columns */
 #visualization-filters {
     display: flex;

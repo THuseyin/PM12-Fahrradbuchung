@@ -243,11 +243,46 @@ function handleMarkerClick(station) {
     // Fetch detailed data
      const startTransactions = routesData.filter(route => route.Start_Station_ID == station.stationId).length;
       const endTransactions = routesData.filter(route => route.Ende_Station_ID == station.stationId).length;
+       // Find top 5 outbound stations
+        const outboundStations = routesData
+        .filter(route => route.Start_Station_ID == station.stationId)
+            .reduce((acc, route) => {
+                const endStation = route.Ende_Station;
+                if (acc[endStation]) {
+                    acc[endStation]++;
+                } else {
+                    acc[endStation] = 1;
+                }
+                return acc;
+            }, {});
+    const topOutbound = Object.entries(outboundStations)
+            .sort(([, countA], [, countB]) => countB - countA)
+            .slice(0, 5)
+             .map(([stationName, count]) => `<p>${stationName} : ${count}</p> `);
+            // Find top 5 inbound stations
+     const inboundStations = routesData
+            .filter(route => route.Ende_Station_ID == station.stationId)
+             .reduce((acc, route) => {
+                 const startStation = route.Start_Station;
+                    if (acc[startStation]) {
+                    acc[startStation]++;
+                 } else {
+                     acc[startStation] = 1;
+                  }
+                return acc;
+            }, {});
+       const topInbound = Object.entries(inboundStations)
+          .sort(([, countA], [, countB]) => countB - countA)
+            .slice(0, 5)
+              .map(([stationName, count]) => `<p> ${stationName} : ${count} </p>`);
+
 
      panelContent.innerHTML = `
          <p><b>Station Name:</b> ${station.stationName}</p>
         <p><b>Start Transactions:</b> ${startTransactions}</p>
          <p><b>End Transactions:</b> ${endTransactions}</p>
+          <p><b>Top 5 Outbound Stations:</b> ${topOutbound.length > 0 ? topOutbound.join('') : 'No outbound data'}</p>
+        <p><b>Top 5 Inbound Stations:</b> ${topInbound.length > 0 ? topInbound.join('') : 'No inbound data'}</p>
      `;
     // Close panel button
      const closeButton =  document.getElementById('close-panel-button');
@@ -450,8 +485,8 @@ async function handleSearchResultClick(result) {
          if(searchMarker){
                 map.removeLayer(searchMarker);
                 searchMarker = null;
-                console.log("Search marker removed after finding closest station");
-          }
+                 console.log("Search marker removed after finding closest station");
+            }
      }
 }
 
