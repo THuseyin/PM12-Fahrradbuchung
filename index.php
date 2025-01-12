@@ -35,7 +35,7 @@
         <div class="filters-overlay">
             <div class="filters-container">
                 <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Search...">
+                    <input type="text" id="search-input" placeholder="">
                     <button id="search-button">
                         <i class="fa fa-search"></i>
                     </button>
@@ -108,7 +108,12 @@
 
 
     <script type="module" src="js/app.js"></script>
+    <div id="loading-spinner">
+    <div class="spinner"></div>
+</div>
+    
 
 </body>
+
 
 </html>

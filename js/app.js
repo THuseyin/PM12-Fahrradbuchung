@@ -284,13 +284,24 @@ function handleMarkerClick(station) {
         .map(([stationName, count]) => `<p> ${stationName} : ${count} </p>`);
 
 
-    panelContent.innerHTML = `
-         <p><b>Station Name:</b> ${station.stationName}</p>
-        <p><b>Start Transactions:</b> ${startTransactions}</p>
-         <p><b>End Transactions:</b> ${endTransactions}</p>
-          <p><b>Top 5 Outbound Stations:</b> ${topOutbound.length > 0 ? topOutbound.join('') : 'No outbound data'}</p>
-        <p><b>Top 5 Inbound Stations:</b> ${topInbound.length > 0 ? topInbound.join('') : 'No inbound data'}</p>
-     `;
+        panelContent.innerHTML = `
+        <div class="station-info">
+            <p><b>Station Name:</b> ${station.stationName}</p>
+            <p><b>Start Transactions:</b> ${startTransactions}</p>
+            <p><b>End Transactions:</b> ${endTransactions}</p>
+        </div>
+        <div class="transaction-info">
+            <p><b>Top 5 Outbound Stations:</b></p>
+            <ul>
+                ${topOutbound.map(station => `<li>${station}</li>`).join('')}
+            </ul>
+            <p><b>Top 5 Inbound Stations:</b></p>
+            <ul>
+                ${topInbound.map(station => `<li>${station}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+    
     // Close panel button
     const closeButton = document.getElementById('close-panel-button');
     closeButton.onclick = () => {
@@ -314,6 +325,21 @@ function handleMarkerClick(station) {
     }).addTo(map);
     console.log("Added blue marker to selected station:", station);
     handleRoutes(station);
+    document.addEventListener('DOMContentLoaded', () => {
+        const stationPanel = document.getElementById('station-panel');
+        const panelContent = document.getElementById('panel-content');
+        const panelHeader = stationPanel.querySelector('.panel-header');
+    
+        if (panelContent && panelHeader) {
+            const headerHeight = panelHeader.offsetHeight; // Höhe des Headers
+            const panelHeight = stationPanel.offsetHeight; // Gesamthöhe des Panels
+    
+            // Setze die Höhe des Inhaltsbereichs
+            panelContent.style.maxHeight = `${panelHeight - headerHeight}px`;
+            console.log(`Set maxHeight of panel-content: ${panelHeight - headerHeight}px`);
+        }
+    });
+    
 }
 
 function handleRoutes(station) {
@@ -591,3 +617,5 @@ document.getElementById('search-button').addEventListener('click', async functio
         console.error('Error fetching address:', error);
     }
 });
+
+
