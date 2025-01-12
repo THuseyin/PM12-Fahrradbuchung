@@ -45,10 +45,10 @@
                     <div class="form-column">
                         <div class="booking-type-options">
                             <label>
-                                <input type="radio" name="booking-type" value="start" checked> Startbuchungen
+                                <input type="radio" name="booking-type" value="start" checked> Start Bookings
                             </label>
                             <label>
-                                <input type="radio" name="booking-type" value="end"> Endbuchungen
+                                <input type="radio" name="booking-type" value="end"> End Bookings
                             </label>
                         </div>
                     </div>

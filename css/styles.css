@@ -29,60 +29,56 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Overlay for Filters */
 .filters-overlay {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    /* Adjust width as needed */
-    height: 17vh;
-    /* Set height to 17% of viewport height */
-    background-color: rgba(255, 184, 77, 0.8);
-    /* #ffb84d with opacity */
-    padding: 10px;
-    box-sizing: border-box;
-    z-index: 2;
-    border-radius: 10px;
+    max-width: 1200px;
+    background: #ffffff; /* Weißer Hintergrund */
+    border: 1px solid #ddd; /* Leichter Rand */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+    padding: 20px;
+    border-radius: 12px; /* Abgerundete Ecken */
     display: flex;
-    justify-content: center;
-    /* Center content horizontally */
+    flex-wrap: wrap; /* Flexbox für Responsive Design */
+    gap: 15px; /* Abstand zwischen Elementen */
     align-items: center;
-    /* Center content vertically */
+    z-index: 1000; /* Sicherstellen, dass es über der Karte ist */
 }
 
-.station-panel {
-    position: absolute;
-    top: 20%;
-    right: 20px;
-    width: 350px;
-    height: 400px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Standardmäßig ausblenden */
-    flex-direction: column;
-    z-index: 1000;
-    overflow: hidden;
-    transition: opacity 0.3s ease; /* Sanftes Einblenden */
-}
+    .station-panel {
+        position: absolute;
+        top: 20%;
+        right: 20px;
+        width: 350px;
+        height: 400px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        display: none; /* Standardmäßig ausblenden */
+        flex-direction: column;
+        z-index: 1000;
+        overflow: hidden;
+        transition: opacity 0.3s ease; /* Sanftes Einblenden */
+    }
 
-.station-panel.active {
-    display: flex; /* Aktiviert das Panel */
-    opacity: 1; /* Sichtbar */
-}
+    .station-panel.active {
+        display: flex; /* Aktiviert das Panel */
+        opacity: 1; /* Sichtbar */
+    }
 
 
-.panel-header {
-    background-color: #3498db; /* Primärfarbe */
-    color: white;
-    padding: 10px;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #2980b9;
+    .panel-header {
+        background-color: #3498db; /* Primärfarbe */
+        color: white;
+        padding: 10px;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #2980b9;
 }
 
 .panel-header h3 {
@@ -136,47 +132,33 @@ body {
     padding: 10px;
 }
 
-/* Search Field */
 .search-container {
-    flex: 0 0 40%;
-    /* Take up 40% of the width, don't grow or shrink */
+    flex: 1 1 40%; /* 40% des verfügbaren Platzes */
     display: flex;
-    align-items: center;
-     position: relative;
-    /* align items vertically within the container */
+    gap: 10px; /* Abstand zwischen Suchfeld und Button */
 }
 
 #search-input {
-    margin-right: 15px;
-    /* Space between search and other elements */
-    padding: 8px;
-    border-radius: 4px;
+    flex: 1; /* Nimmt die verbleibende Breite ein */
+    padding: 10px;
     border: 1px solid #ccc;
-    width: 100%;
-    /* Take full width of search-container*/
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 #search-button {
-    background-color: #3498db;
+    background: #3498db; /* Blau */
     color: white;
     border: none;
-    border-radius: 0 4px 4px 0;
-    padding: 8px 16px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: -4px;
-    /* To be flush with input */
-    height: 37px;
-    width: 40px;
-    /* Adjust as needed */
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: background 0.3s ease;
 }
 
 #search-button:hover {
-    background-color: #2980b9;
+    background: #2980b9; /* Dunkleres Blau beim Hover */
 }
 
 /* Form Layout Columns */
@@ -211,11 +193,15 @@ body {
 
 }
 
-/* Dropdown Group Container for horizontal alignment */
 .dropdown-group {
+    flex: 1 1 30%; /* 30% des verfügbaren Platzes */
     display: flex;
-    margin-right: auto;
-    /* Push refresh button to the right */
+    justify-content: space-between;
+    gap: 10px;
+}
+.dropdown {
+    position: relative;
+    flex: 1;
 }
 
 .filters-container legend {
@@ -226,23 +212,9 @@ body {
 }
 
 .button-container {
-    display: flex;
-    justify-content: flex-end;
-    /* Align button to the right */
-    margin-left: 15px;
-    /* Space between filters and button */
+    flex: 0 1 auto;
 }
 
-#refresh-database {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
 
 #refresh-database:hover {
     background-color: #2980b9;
@@ -250,26 +222,32 @@ body {
     transform: translateY(-2px);
 }
 
-/* Dropdown Styles */
-.dropdown {
-    margin-bottom: 10px;
-    position: relative;
-}
 
-.dropdown-button {
-    background-color: #3498db;
+#refresh-database {
+    background: #e74c3c; /* Rotes Design */
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    pointer-events: none;
-    /* Disable button clicks */
-    width: 180px;
-    /* Set the width of the button */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+}
+#refresh-database:hover {
+    background: #c0392b; /* Dunkleres Rot */
+}
+.dropdown-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
     text-align: left;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-    font-family: 'Open Sans', sans-serif;
+    transition: background 0.3s ease;
 }
 
 .dropdown-button:hover {
@@ -277,22 +255,20 @@ body {
 }
 
 .dropdown-content {
-    animation: fadeIn 0.3s ease;
-    display: none;
+    display: none; /* Standardmäßig verstecken */
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    /* Match the width of the button */
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 3;
-    border-radius: 4px;
-    padding: 10px;
-    box-sizing: border-box;
-    bottom: 100%;
-
+    bottom: 110%; /* Unterhalb des Buttons */
     left: 0;
-    transform: translateY(0px);
-    /*Moves drop down to the same line with button*/
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 2000;
+    width: 100%;
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* Dropdown anzeigen bei Hover */
 }
 
 @keyframes fadeIn {
@@ -308,7 +284,9 @@ body {
 
 .dropdown-content label {
     display: block;
-    margin-bottom: 5px;
+    padding: 5px 0;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .dropdown:hover .dropdown-content {
