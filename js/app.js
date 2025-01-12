@@ -230,6 +230,12 @@ function processroutesData(data) {
 }
 // Function to handle marker clicks
 function handleMarkerClick(station) {
+
+    station.stationId = station.stationId ?? station.Station_ID;
+    station.latitude = station.latitude ?? station.Latitude;
+    station.longitude = station.longitude ?? station.Longitude;
+    station.stationName = station.stationName ?? station.Station_Name;
+
      const panel = document.getElementById('station-panel');
       const panelContent = document.getElementById('panel-content');
      console.log("Marker clicked for station:", station);
@@ -339,7 +345,7 @@ function handleRoutes(station) {
             opacity: 0.8
         }).addTo(map);
 
-        polyline.bindTooltip(`${route.howManyToStation} to ${stationId}<br> ${route.howManyFromStation} from ${stationId}`, { permanent: false });
+        polyline.bindTooltip(`<b>Station Name:${route.stationName} </b> <br> To: ${route.howManyToStation} Transaktion <br> From: ${route.howManyFromStation} Transaktion`, { permanent: false });
 
         polylines.push(polyline);
     };
@@ -436,11 +442,16 @@ async function handleSearchResultClick(result) {
              console.log("Previous selectedStationMarker removed");
          }
         // Add the blue marker at the selected station's location
-         selectedStationMarker = L.marker([nearestStation.latitude, nearestStation.longitude], {
+         selectedStationMarker = L.marker([nearestStation.Latitude, nearestStation.Longitude], {
            icon: blueMarker
            }).addTo(map);
             console.log("Blue marker added to the closest station:", nearestStation);
         handleMarkerClick(nearestStation)
+         if(searchMarker){
+                map.removeLayer(searchMarker);
+                searchMarker = null;
+                console.log("Search marker removed after finding closest station");
+          }
      }
 }
 
@@ -524,6 +535,11 @@ document.getElementById('search-button').addEventListener('click', async functio
              }).addTo(map);
              console.log("Blue marker added to the closest station:", nearestStation);
          handleMarkerClick(nearestStation)
+              if(searchMarker){
+                map.removeLayer(searchMarker);
+                searchMarker = null;
+                 console.log("Search marker removed after finding closest station");
+            }
         }
       } else{
            alert("Address not found")
