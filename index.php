@@ -22,24 +22,28 @@
 <body>
     <div class="container">
         <div id="map"></div>
-         <div id="station-panel" class="station-panel">
+        <div id="station-panel" class="station-panel">
             <div class="panel-header">
                 <h3>Detailed Station Information</h3>
                 <button id="close-panel-button" class="close-button">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-           <div id="panel-content">
-           </div>
+            <div id="panel-content">
+            </div>
         </div>
         <div class="filters-overlay">
             <div class="filters-container">
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Search...">
+                    <button id="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <div id="search-results-container" class="search-results"></div>
                 </div>
                 <form id="visualization-filters">
                     <div class="form-column">
-                         <div class="booking-type-options">
+                        <div class="booking-type-options">
                             <label>
                                 <input type="radio" name="booking-type" value="start" checked> Startbuchungen
                             </label>
@@ -49,7 +53,7 @@
                         </div>
                     </div>
                     <div class="form-column">
-                         <div class="dropdown-group">
+                        <div class="dropdown-group">
                             <div class="dropdown">
                                 <button class="dropdown-button">Booking Portals</button>
                                 <div id="booking-portals" class="dropdown-content">
@@ -95,9 +99,9 @@
                         </div>
                     </div>
                 </form>
-                  <div class="button-container">
-                      <button type="button" id="refresh-database">Refresh Database</button>
-                  </div>
+                <div class="button-container">
+                    <button type="button" id="refresh-database">Refresh Database</button>
+                </div>
             </div>
         </div>
     </div>

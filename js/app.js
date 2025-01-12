@@ -3,9 +3,13 @@ import { initilazeMap, initMarkers, yellowMarker, greenMarker, redMarker, blueMa
 console.log("App.js loaded");
 
 var map = L.map('map').setView([50.1109, 8.6821], 13);
-var stationData;
+var routesData;
+var stationsData;
 var polylines = [];
-var selectedStationMarker; // to store selected station marker
+var selectedStationMarker;
+var searchMarker;
+var searchResults = [];
+let currentFetchController = null; // To hold the current fetch controller
 initilazeMap(map);
 initMarkers();
 
@@ -13,6 +17,7 @@ initMarkers();
 function getInitialFilters() {
     const selectedPortals = Array.from(document.querySelectorAll('input[name="portals[]"]:checked')).map(cb => cb.value);
     const selectedDays = Array.from(document.querySelectorAll('input[name="days[]"]:checked')).map(cb => cb.value);
+    console.log("Initial filters:", { portals: selectedPortals, days: selectedDays });
 
     return {
         portals: selectedPortals,
@@ -20,11 +25,19 @@ function getInitialFilters() {
     };
 }
 
-loadStationData(getInitialFilters()).then((data) => {
-    processStationData(data);
-    stationData = data;
+loadRoutesData(getInitialFilters()).then((data) => {
+    processroutesData(data);
+    routesData = data;
+    console.log("Routes data loaded successfully:", routesData);
 }).catch((error) => {
-    console.error('Error loading data:', error);
+    console.error('Error loading routes data:', error);
+});
+
+loadStationsData().then((data) => {
+    stationsData = data;
+    console.log("Stations data loaded successfully:", stationsData);
+}).catch((error) => {
+    console.error('Error loading stations data:', error);
 });
 
 // --------EVENT LISTENER--------
@@ -32,6 +45,7 @@ document.getElementById('refresh-database').addEventListener('click', () => {
     console.log("Button clicked");
     if (typeof refreshDatabase === 'function') {
         refreshDatabase();
+         console.log("refreshDatabase function is called");
     } else {
         console.error("refreshDatabase function is not defined.");
     }
@@ -42,10 +56,12 @@ document.querySelectorAll('input[type="checkbox"], input[name="booking-type"]').
     filter.addEventListener('change', () => {
         console.log("Filter changed");
         const filters = getFilters();
+         console.log("New filters:", filters);
         clearLayers();
-        loadStationData(filters).then(data => {
-            processStationData(data);
-            stationData = data;
+        loadRoutesData(filters).then(data => {
+            processroutesData(data);
+             routesData = data;
+               console.log("Routes data loaded successfully with new filters:", routesData);
         }).catch(error => {
             console.error('Error loading data:', error);
         });
@@ -55,21 +71,30 @@ document.querySelectorAll('input[type="checkbox"], input[name="booking-type"]').
 // Map click listener to reset all polylines and stations
 map.on('click', (e) => {
     const panel = document.getElementById('station-panel');
+    const searchResultsContainer = document.getElementById('search-results-container');
+     console.log("Map clicked", e.originalEvent.target);
     if (panel.classList.contains('active') && !e.originalEvent.target.closest('.station-panel')) {
-        panel.classList.remove('active');
-          if (selectedStationMarker) {
+         panel.classList.remove('active');
+            console.log("Station panel closed on map click");
+       if (selectedStationMarker) {
            map.removeLayer(selectedStationMarker);
-           selectedStationMarker= null;
+            selectedStationMarker= null;
+            console.log("selectedStationMarker removed");
           }
     }
+    if(searchResultsContainer && !e.originalEvent.target.closest('.search-results')){
+         searchResultsContainer.style.display = 'none';
+          console.log("Search suggestions closed on map click");
+    }
     clearPolylines();
-    processStationData(stationData);
+    processroutesData(routesData);
 });
 
 // Get filters
 function getFilters() {
     const selectedPortals = Array.from(document.querySelectorAll('input[name="portals[]"]:checked')).map(cb => cb.value);
     const selectedDays = Array.from(document.querySelectorAll('input[name="days[]"]:checked')).map(cb => cb.value);
+      console.log("Current filters:", { portals: selectedPortals, days: selectedDays });
     return {
         portals: selectedPortals,
         days: selectedDays
@@ -77,20 +102,50 @@ function getFilters() {
 }
 
 // --------EVENT LISTENER--------
-function loadStationData(filters) {
+function loadRoutesData(filters) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
+         console.log("Fetching routes data with filters:", filters);
         xhr.open('GET', `./cache_handler.php?&filters=${JSON.stringify(filters)}`, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     try {
                         const data = JSON.parse(xhr.responseText);
+                         console.log("Routes data fetched successfully:", data);
                         resolve(data);
                     } catch (error) {
+                         console.error('Error parsing routes data:', error);
                         reject(error);
                     }
                 } else {
+                    console.error('Error loading routes data:', xhr.statusText);
+                    reject(xhr.statusText);
+                }
+            }
+        };
+        xhr.send();
+    });
+}
+// --------EVENT LISTENER--------
+function loadStationsData() {
+     return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        console.log("Fetching stations data");
+        xhr.open('GET', `./stations.php`, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    try {
+                        const data = JSON.parse(xhr.responseText);
+                        console.log("Stations data fetched successfully:", data);
+                        resolve(data);
+                    } catch (error) {
+                          console.error('Error parsing stations data:', error);
+                        reject(error);
+                    }
+                } else {
+                     console.error('Error loading stations data:', xhr.statusText);
                     reject(xhr.statusText);
                 }
             }
@@ -99,10 +154,10 @@ function loadStationData(filters) {
     });
 }
 
-function processStationData(data) {
+function processroutesData(data) {
     const bookingType = document.querySelector('input[name="booking-type"]:checked')?.value || "start";
     const stationCounts = {};
-
+     console.log("Processing routes data with booking type:", bookingType);
     data.forEach(route => {
         let stationId;
         let latitude;
@@ -137,7 +192,11 @@ function processStationData(data) {
     const twentyPercent = Math.floor(totalStations * 0.2);
     const topTwentyPercentThreshold = sortedTransactions[totalStations - twentyPercent - 1];
     const bottomTwentyPercentThreshold = sortedTransactions[twentyPercent];
-
+        console.log("Station counts:", stationCounts);
+        console.log("Transactions:", transactions);
+       console.log("Sorted transactions:", sortedTransactions);
+        console.log("Top 20% threshold:", topTwentyPercentThreshold);
+        console.log("Bottom 20% threshold:", bottomTwentyPercentThreshold);
     clearLayers();
 
     for (const stationId in stationCounts) {
@@ -154,7 +213,7 @@ function processStationData(data) {
             <b>Station Name:</b> ${station.stationName}<br>
             <b>Station ID:</b> ${stationId}<br>
             <b>Transactions:</b> ${station.count}`;
-
+         console.log("Adding marker for station:", {stationId, station, markerIcon});
         const marker = L.marker([station.latitude, station.longitude], {
             icon: markerIcon,
             stationID: station.stationId
@@ -173,10 +232,11 @@ function processStationData(data) {
 function handleMarkerClick(station) {
      const panel = document.getElementById('station-panel');
       const panelContent = document.getElementById('panel-content');
+     console.log("Marker clicked for station:", station);
     panel.classList.add('active');
     // Fetch detailed data
-     const startTransactions = stationData.filter(route => route.Start_Station_ID == station.stationId).length;
-      const endTransactions = stationData.filter(route => route.Ende_Station_ID == station.stationId).length;
+     const startTransactions = routesData.filter(route => route.Start_Station_ID == station.stationId).length;
+      const endTransactions = routesData.filter(route => route.Ende_Station_ID == station.stationId).length;
 
      panelContent.innerHTML = `
          <p><b>Station Name:</b> ${station.stationName}</p>
@@ -190,6 +250,7 @@ function handleMarkerClick(station) {
             if (selectedStationMarker) {
            map.removeLayer(selectedStationMarker);
             selectedStationMarker= null;
+              console.log("Station panel closed");
           }
          };
     
@@ -197,11 +258,13 @@ function handleMarkerClick(station) {
      // Remove previous marker
       if (selectedStationMarker) {
             map.removeLayer(selectedStationMarker);
+              console.log("Previous selectedStationMarker removed");
       }
      // Add the blue marker at the selected station's location
        selectedStationMarker = L.marker([station.latitude, station.longitude], {
          icon: blueMarker
         }).addTo(map);
+        console.log("Added blue marker to selected station:", station);
     handleRoutes(station);
 }
 
@@ -209,7 +272,8 @@ function handleRoutes(station) {
     clearLayers();
     clearPolylines();
     var connectionToStations = {};
-    stationData.forEach(route => {
+     console.log("Handling routes for station:", station);
+    routesData.forEach(route => {
 
         if (route.Start_Station_ID != station.stationId && route.Ende_Station_ID != station.stationId) {
             return;
@@ -239,6 +303,7 @@ function handleRoutes(station) {
         }
 
     });
+      console.log("Connection to Stations :", connectionToStations);
     for (const stationId in connectionToStations) {
         const route = connectionToStations[stationId];
 
@@ -246,24 +311,23 @@ function handleRoutes(station) {
         const endLatLng = [route.latitude, route.longitude];
 
         const isToBigger = route.howManyToStation > route.howManyFromStation;
-        var polylineColor = isToBigger ? 'green' : 'red';
+       var polylineColor = isToBigger ? 'green' : 'red';
         const netTransactionCount = Math.abs(route.howManyToStation - route.howManyFromStation);
 
 
         let markerIcon = yellowMarker;
-        if (netTransactionCount === 0) {
+         if (netTransactionCount === 0) {
             markerIcon = yellowMarker;
             polylineColor = 'yellow';
-        } else if (!isToBigger) {
-            markerIcon = redMarker;
+         } else if (!isToBigger) {
+           markerIcon = redMarker;
         } else if (isToBigger) {
-            markerIcon = greenMarker;
-        } 
-        if (station.latitude === route.latitude && station.longitude === route.longitude) {
+           markerIcon = greenMarker;
+         }
+         if (station.latitude === route.latitude && station.longitude === route.longitude) {
             continue;
         }
-
-
+        console.log("Creating route connection with", {startLatLng,endLatLng, polylineColor, netTransactionCount, markerIcon});
         const marker = L.marker([route.latitude, route.longitude], {
             icon: markerIcon
         })
@@ -271,7 +335,7 @@ function handleRoutes(station) {
 
         const polyline = L.polyline([startLatLng, endLatLng], {
             color: polylineColor,
-            weight: polylineColor === 'yellow' ? 1 : netTransactionCount, // Adjust weight
+              weight: polylineColor === 'yellow' ? 1 : netTransactionCount, // Adjust weight
             opacity: 0.8
         }).addTo(map);
 
@@ -284,6 +348,7 @@ function handleRoutes(station) {
 
 function clearPolylines() {
     polylines.forEach(polyline => map.removeLayer(polyline));
+     console.log("Polylines cleared");
     polylines = [];
 }
 
@@ -291,4 +356,180 @@ function clearLayers() {
     AboveAvarageDensityLayer.clearLayers();
     UnderAvarageDensityLayer.clearLayers();
     AboutAvarageDensityLayer.clearLayers();
+      console.log("Map layers cleared");
 }
+
+// Event listener for the search input
+document.getElementById('search-input').addEventListener('input', async function() {
+    const address = this.value;
+    const searchResultsContainer = document.getElementById('search-results-container');
+     console.log("Search input changed. Current value:", address);
+     if (!address) {
+         if(searchMarker){
+           map.removeLayer(searchMarker);
+          searchMarker=null;
+            console.log("Search marker removed due to empty input");
+          }
+         searchResultsContainer.style.display = 'none';
+         console.log("Search suggestions hidden due to empty input");
+        return;
+    }
+    // Abort previous fetch if it's in progress
+    if (currentFetchController) {
+       currentFetchController.abort();
+         console.log("Previous fetch aborted");
+   }
+     // Create a new AbortController for the current fetch
+    currentFetchController = new AbortController();
+
+    try {
+         const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`,{signal: currentFetchController.signal});
+         const data = await response.json();
+           searchResults = data;
+           searchResultsContainer.innerHTML ='';
+         if (searchResults && searchResults.length > 0) {
+            searchResultsContainer.style.display ='block';
+             searchResults.forEach(result => {
+                 const resultElement = document.createElement('div');
+                  resultElement.classList.add('search-result');
+                resultElement.textContent = result.display_name;
+               resultElement.onclick = () => handleSearchResultClick(result);
+                  searchResultsContainer.appendChild(resultElement);
+            });
+              console.log("Search suggestions loaded:", searchResults);
+       } else{
+           searchResultsContainer.style.display ='none';
+           console.log("No search suggestions found");
+       }
+
+
+    }  catch (error) {
+         if (error.name !== 'AbortError') { //To not console log abort error
+              console.error('Error fetching address:', error);
+        }
+    }
+});
+// Function to handle click on search result
+async function handleSearchResultClick(result) {
+    const searchResultsContainer = document.getElementById('search-results-container');
+    searchResultsContainer.style.display ='none';
+     document.getElementById('search-input').value = result.display_name; //Set the value of input
+    console.log("Search result selected:", result.display_name);
+    const { lat, lon, display_name } = result;
+    if(searchMarker){
+        map.removeLayer(searchMarker);
+         console.log("Previous search marker removed");
+    }
+    searchMarker = L.marker([lat, lon])
+        .addTo(map)
+        .bindPopup(display_name)
+        .openPopup();
+         console.log("New search marker added", {lat, lon, display_name});
+    map.setView([lat,lon],16)
+    // Find the nearest station
+    const nearestStation = findNearestStation(lat, lon);
+
+    if (nearestStation) {
+         // Remove previous marker
+         if (selectedStationMarker) {
+            map.removeLayer(selectedStationMarker);
+             console.log("Previous selectedStationMarker removed");
+         }
+        // Add the blue marker at the selected station's location
+         selectedStationMarker = L.marker([nearestStation.latitude, nearestStation.longitude], {
+           icon: blueMarker
+           }).addTo(map);
+            console.log("Blue marker added to the closest station:", nearestStation);
+        handleMarkerClick(nearestStation)
+     }
+}
+
+function findNearestStation(lat, lon) {
+    if (!stationsData || stationsData.length === 0) {
+        console.warn('No station data available to find the nearest station');
+        return null;
+    }
+
+    let closestStation = null;
+    let minDistance = Infinity;
+
+    for (const station of stationsData) {
+         const distance = calculateDistance(lat, lon, station.Latitude, station.Longitude);
+        if (distance < minDistance) {
+            minDistance = distance;
+            closestStation = station;
+        }
+    }
+      console.log("Nearest station found:", closestStation);
+    return closestStation;
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Radius of the earth in km
+     const lat1Rad = deg2rad(lat1);
+    const lon1Rad = deg2rad(lon1);
+    const lat2Rad = deg2rad(lat2);
+    const lon2Rad = deg2rad(lon2);
+
+    const dLat = lat2Rad - lat1Rad;
+    const dLon = lon2Rad - lon1Rad;
+
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1Rad) * Math.cos(lat2Rad) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const distance = R * c;
+    
+    return distance;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
+}
+// Event listener for the search button
+document.getElementById('search-button').addEventListener('click', async function() {
+      const address = document.getElementById('search-input').value;
+    if (!address) {
+      alert("Please enter a address")
+      return;
+    }
+      console.log("Search button clicked with address", address);
+    try {
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`);
+          const data = await response.json();
+      if (data && data.length > 0) {
+        const { lat, lon, display_name } = data[0];
+      if(searchMarker){
+           map.removeLayer(searchMarker);
+             console.log("Previous search marker removed");
+       }
+        searchMarker = L.marker([lat, lon])
+           .addTo(map)
+            .bindPopup(display_name)
+            .openPopup();
+            console.log("New search marker added", {lat, lon, display_name});
+         map.setView([lat,lon],16)
+        // Find the nearest station
+        const nearestStation = findNearestStation(lat, lon);
+
+        if (nearestStation) {
+            // Remove previous marker
+             if (selectedStationMarker) {
+                 map.removeLayer(selectedStationMarker);
+                  console.log("Previous selectedStationMarker removed");
+             }
+             // Add the blue marker at the selected station's location
+            selectedStationMarker = L.marker([nearestStation.Latitude, nearestStation.Longitude], {
+            icon: blueMarker
+             }).addTo(map);
+             console.log("Blue marker added to the closest station:", nearestStation);
+         handleMarkerClick(nearestStation)
+        }
+      } else{
+           alert("Address not found")
+      }
+
+    } catch (error) {
+        console.error('Error fetching address:', error);
+    }
+});
