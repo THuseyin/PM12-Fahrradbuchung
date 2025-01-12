@@ -41,11 +41,35 @@ loadStationsData().then((data) => {
 });
 
 // --------EVENT LISTENER--------
-document.getElementById('refresh-database').addEventListener('click', () => {
+document.getElementById('refresh-database').addEventListener('click', async () => {
     console.log("Button clicked");
-    if (typeof refreshDatabase === 'function') {
-        refreshDatabase();
-        console.log("refreshDatabase function is called");
+    const loadingSpinner = document.getElementById('loading-spinner');
+     const container = document.querySelector('.container')
+
+    loadingSpinner.style.display = 'flex';
+    container.classList.add('loading'); //Add the grayed background
+
+      if (typeof refreshDatabase === 'function') {
+        try{
+            await refreshDatabase();
+            loadingSpinner.innerHTML = `<div class="success-message"><i class="fas fa-check-circle"></i> Database Successfully Updated</div>`;
+             console.log("refreshDatabase function is called");
+              setTimeout(() => {
+                   loadingSpinner.style.display = 'none';
+                  loadingSpinner.innerHTML = `<div class="spinner"></div>`
+                  container.classList.remove('loading');
+               }, 2000);
+        }
+        catch(error){
+             console.error("refreshDatabase function couldn't update database:", error);
+              loadingSpinner.innerHTML = `<div class="error-message"><i class="fas fa-times-circle"></i> Database couldn't Updated</div>`;
+              setTimeout(() => {
+                   loadingSpinner.style.display = 'none';
+                   loadingSpinner.innerHTML = `<div class="spinner"></div>`
+                  container.classList.remove('loading');
+               }, 2000);
+
+        }
     } else {
         console.error("refreshDatabase function is not defined.");
     }
@@ -56,7 +80,7 @@ document.querySelectorAll('input[type="checkbox"], input[name="booking-type"]').
     filter.addEventListener('change', () => {
         console.log("Filter changed");
         const filters = getFilters();
-        console.log("New filters:", filters);
+         console.log("New filters:", filters);
         clearLayers();
         clearPolylines();
         const panel = document.getElementById('station-panel');
@@ -67,8 +91,8 @@ document.querySelectorAll('input[type="checkbox"], input[name="booking-type"]').
         }
         loadRoutesData(filters).then(data => {
             processroutesData(data);
-            routesData = data;
-            console.log("Routes data loaded successfully with new filters:", routesData);
+             routesData = data;
+               console.log("Routes data loaded successfully with new filters:", routesData);
         }).catch(error => {
             console.error('Error loading data:', error);
         });
@@ -79,19 +103,19 @@ document.querySelectorAll('input[type="checkbox"], input[name="booking-type"]').
 map.on('click', (e) => {
     const panel = document.getElementById('station-panel');
     const searchResultsContainer = document.getElementById('search-results-container');
-    console.log("Map clicked", e.originalEvent.target);
+     console.log("Map clicked", e.originalEvent.target);
     if (panel.classList.contains('active') && !e.originalEvent.target.closest('.station-panel')) {
-        panel.classList.remove('active');
-        console.log("Station panel closed on map click");
-        if (selectedStationMarker) {
-            map.removeLayer(selectedStationMarker);
-            selectedStationMarker = null;
+         panel.classList.remove('active');
+            console.log("Station panel closed on map click");
+       if (selectedStationMarker) {
+           map.removeLayer(selectedStationMarker);
+            selectedStationMarker= null;
             console.log("selectedStationMarker removed");
-        }
+          }
     }
-    if (searchResultsContainer && !e.originalEvent.target.closest('.search-results')) {
-        searchResultsContainer.style.display = 'none';
-        console.log("Search suggestions closed on map click");
+    if(searchResultsContainer && !e.originalEvent.target.closest('.search-results')){
+         searchResultsContainer.style.display = 'none';
+          console.log("Search suggestions closed on map click");
     }
     clearPolylines();
     processroutesData(routesData);
@@ -101,7 +125,7 @@ map.on('click', (e) => {
 function getFilters() {
     const selectedPortals = Array.from(document.querySelectorAll('input[name="portals[]"]:checked')).map(cb => cb.value);
     const selectedDays = Array.from(document.querySelectorAll('input[name="days[]"]:checked')).map(cb => cb.value);
-    console.log("Current filters:", { portals: selectedPortals, days: selectedDays });
+      console.log("Current filters:", { portals: selectedPortals, days: selectedDays });
     return {
         portals: selectedPortals,
         days: selectedDays
@@ -112,17 +136,17 @@ function getFilters() {
 function loadRoutesData(filters) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        console.log("Fetching routes data with filters:", filters);
+         console.log("Fetching routes data with filters:", filters);
         xhr.open('GET', `./cache_handler.php?&filters=${JSON.stringify(filters)}`, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     try {
                         const data = JSON.parse(xhr.responseText);
-                        console.log("Routes data fetched successfully:", data);
+                         console.log("Routes data fetched successfully:", data);
                         resolve(data);
                     } catch (error) {
-                        console.error('Error parsing routes data:', error);
+                         console.error('Error parsing routes data:', error);
                         reject(error);
                     }
                 } else {
@@ -136,7 +160,7 @@ function loadRoutesData(filters) {
 }
 // --------EVENT LISTENER--------
 function loadStationsData() {
-    return new Promise((resolve, reject) => {
+     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         console.log("Fetching stations data");
         xhr.open('GET', `./stations.php`, true);
@@ -148,11 +172,11 @@ function loadStationsData() {
                         console.log("Stations data fetched successfully:", data);
                         resolve(data);
                     } catch (error) {
-                        console.error('Error parsing stations data:', error);
+                          console.error('Error parsing stations data:', error);
                         reject(error);
                     }
                 } else {
-                    console.error('Error loading stations data:', xhr.statusText);
+                     console.error('Error loading stations data:', xhr.statusText);
                     reject(xhr.statusText);
                 }
             }
@@ -164,7 +188,7 @@ function loadStationsData() {
 function processroutesData(data) {
     const bookingType = document.querySelector('input[name="booking-type"]:checked')?.value || "start";
     const stationCounts = {};
-    console.log("Processing routes data with booking type:", bookingType);
+     console.log("Processing routes data with booking type:", bookingType);
     data.forEach(route => {
         let stationId;
         let latitude;
@@ -187,9 +211,9 @@ function processroutesData(data) {
             stationCounts[stationId].count++;
             stationCounts[stationId].latitude = latitude;
             stationCounts[stationId].longitude = longitude;
-            stationCounts[stationId].stationName = stationName;
+             stationCounts[stationId].stationName = stationName;
         } else {
-            stationCounts[stationId] = { count: 1, latitude: latitude, longitude: longitude, stationName: stationName };
+             stationCounts[stationId] = { count: 1, latitude: latitude, longitude: longitude, stationName: stationName };
         }
     });
 
@@ -199,11 +223,11 @@ function processroutesData(data) {
     const twentyPercent = Math.floor(totalStations * 0.2);
     const topTwentyPercentThreshold = sortedTransactions[totalStations - twentyPercent - 1];
     const bottomTwentyPercentThreshold = sortedTransactions[twentyPercent];
-    console.log("Station counts:", stationCounts);
-    console.log("Transactions:", transactions);
-    console.log("Sorted transactions:", sortedTransactions);
-    console.log("Top 20% threshold:", topTwentyPercentThreshold);
-    console.log("Bottom 20% threshold:", bottomTwentyPercentThreshold);
+        console.log("Station counts:", stationCounts);
+        console.log("Transactions:", transactions);
+       console.log("Sorted transactions:", sortedTransactions);
+        console.log("Top 20% threshold:", topTwentyPercentThreshold);
+        console.log("Bottom 20% threshold:", bottomTwentyPercentThreshold);
     clearLayers();
 
     for (const stationId in stationCounts) {
@@ -220,7 +244,7 @@ function processroutesData(data) {
             <b>Station Name:</b> ${station.stationName}<br>
             <b>Station ID:</b> ${stationId}<br>
             <b>Transactions:</b> ${station.count}`;
-        console.log("Adding marker for station:", { stationId, station, markerIcon });
+         console.log("Adding marker for station:", {stationId, station, markerIcon});
         const marker = L.marker([station.latitude, station.longitude], {
             icon: markerIcon,
             stationID: station.stationId
@@ -230,8 +254,8 @@ function processroutesData(data) {
 
 
         marker.on('click', () => {
-            station.stationId = stationId;
-            handleMarkerClick(station);
+             station.stationId = stationId;
+              handleMarkerClick(station);
         });
     }
 }
@@ -243,49 +267,49 @@ function handleMarkerClick(station) {
     station.longitude = station.longitude ?? station.Longitude;
     station.stationName = station.stationName ?? station.Station_Name;
 
-    const panel = document.getElementById('station-panel');
-    const panelContent = document.getElementById('panel-content');
-    console.log("Marker clicked for station:", station);
+     const panel = document.getElementById('station-panel');
+      const panelContent = document.getElementById('panel-content');
+     console.log("Marker clicked for station:", station);
     panel.classList.add('active');
     // Fetch detailed data
-    const startTransactions = routesData.filter(route => route.Start_Station_ID == station.stationId).length;
-    const endTransactions = routesData.filter(route => route.Ende_Station_ID == station.stationId).length;
-    // Find top 5 outbound stations
-    const outboundStations = routesData
+     const startTransactions = routesData.filter(route => route.Start_Station_ID == station.stationId).length;
+      const endTransactions = routesData.filter(route => route.Ende_Station_ID == station.stationId).length;
+       // Find top 5 outbound stations
+        const outboundStations = routesData
         .filter(route => route.Start_Station_ID == station.stationId)
-        .reduce((acc, route) => {
-            const endStation = route.Ende_Station;
-            if (acc[endStation]) {
-                acc[endStation]++;
-            } else {
-                acc[endStation] = 1;
-            }
-            return acc;
-        }, {});
+            .reduce((acc, route) => {
+                const endStation = route.Ende_Station;
+                if (acc[endStation]) {
+                    acc[endStation]++;
+                } else {
+                    acc[endStation] = 1;
+                }
+                return acc;
+            }, {});
     const topOutbound = Object.entries(outboundStations)
-        .sort(([, countA], [, countB]) => countB - countA)
-        .slice(0, 5)
-        .map(([stationName, count]) => `<p>${stationName} : ${count}</p> `);
-    // Find top 5 inbound stations
-    const inboundStations = routesData
-        .filter(route => route.Ende_Station_ID == station.stationId)
-        .reduce((acc, route) => {
-            const startStation = route.Start_Station;
-            if (acc[startStation]) {
-                acc[startStation]++;
-            } else {
-                acc[startStation] = 1;
-            }
-            return acc;
-        }, {});
-    const topInbound = Object.entries(inboundStations)
-        .sort(([, countA], [, countB]) => countB - countA)
-        .slice(0, 5)
-        .map(([stationName, count]) => `<p> ${stationName} : ${count} </p>`);
+            .sort(([, countA], [, countB]) => countB - countA)
+            .slice(0, 5)
+             .map(([stationName, count]) => `<p>${stationName} : ${count}</p> `);
+            // Find top 5 inbound stations
+     const inboundStations = routesData
+            .filter(route => route.Ende_Station_ID == station.stationId)
+             .reduce((acc, route) => {
+                 const startStation = route.Start_Station;
+                    if (acc[startStation]) {
+                    acc[startStation]++;
+                 } else {
+                     acc[startStation] = 1;
+                  }
+                return acc;
+            }, {});
+       const topInbound = Object.entries(inboundStations)
+          .sort(([, countA], [, countB]) => countB - countA)
+            .slice(0, 5)
+              .map(([stationName, count]) => `<p> ${stationName} : ${count} </p>`);
 
 
-        panelContent.innerHTML = `
-        <div class="station-info">
+     panelContent.innerHTML = `
+         <div class="station-info">
             <p><b>Station Name:</b> ${station.stationName}</p>
             <p><b>Start Transactions:</b> ${startTransactions}</p>
             <p><b>End Transactions:</b> ${endTransactions}</p>
@@ -300,30 +324,29 @@ function handleMarkerClick(station) {
                 ${topInbound.map(station => `<li>${station}</li>`).join('')}
             </ul>
         </div>
-    `;
-    
+     `;
     // Close panel button
-    const closeButton = document.getElementById('close-panel-button');
-    closeButton.onclick = () => {
-        panel.classList.remove('active');
-        if (selectedStationMarker) {
-            map.removeLayer(selectedStationMarker);
-            selectedStationMarker = null;
-            console.log("Station panel closed");
-        }
-    };
-
+     const closeButton =  document.getElementById('close-panel-button');
+      closeButton.onclick = () => {
+           panel.classList.remove('active');
+            if (selectedStationMarker) {
+           map.removeLayer(selectedStationMarker);
+            selectedStationMarker= null;
+              console.log("Station panel closed");
+          }
+         };
+    
     clearPolylines();
-    // Remove previous marker
-    if (selectedStationMarker) {
-        map.removeLayer(selectedStationMarker);
-        console.log("Previous selectedStationMarker removed");
-    }
-    // Add the blue marker at the selected station's location
-    selectedStationMarker = L.marker([station.latitude, station.longitude], {
-        icon: blueMarker
-    }).addTo(map);
-    console.log("Added blue marker to selected station:", station);
+     // Remove previous marker
+      if (selectedStationMarker) {
+            map.removeLayer(selectedStationMarker);
+              console.log("Previous selectedStationMarker removed");
+      }
+     // Add the blue marker at the selected station's location
+       selectedStationMarker = L.marker([station.latitude, station.longitude], {
+         icon: blueMarker
+        }).addTo(map);
+        console.log("Added blue marker to selected station:", station);
     handleRoutes(station);
     document.addEventListener('DOMContentLoaded', () => {
         const stationPanel = document.getElementById('station-panel');
@@ -617,5 +640,3 @@ document.getElementById('search-button').addEventListener('click', async functio
         console.error('Error fetching address:', error);
     }
 });
-
-

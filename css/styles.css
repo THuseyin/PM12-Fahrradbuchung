@@ -1,6 +1,3 @@
-
-
-
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -36,49 +33,60 @@ body {
     transform: translateX(-50%);
     width: 90%;
     max-width: 1200px;
-    background: #ffffff; /* Weißer Hintergrund */
-    border: 1px solid #ddd; /* Leichter Rand */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+    background: #ffffff;
+    /* Weißer Hintergrund */
+    border: 1px solid #ddd;
+    /* Leichter Rand */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Schatten für Tiefe */
     padding: 20px;
-    border-radius: 12px; /* Abgerundete Ecken */
+    border-radius: 12px;
+    /* Abgerundete Ecken */
     display: flex;
-    flex-wrap: wrap; /* Flexbox für Responsive Design */
-    gap: 15px; /* Abstand zwischen Elementen */
+    flex-wrap: wrap;
+    /* Flexbox für Responsive Design */
+    gap: 15px;
+    /* Abstand zwischen Elementen */
     align-items: center;
-    z-index: 1000; /* Sicherstellen, dass es über der Karte ist */
+    z-index: 1000;
+    /* Sicherstellen, dass es über der Karte ist */
 }
 
-    .station-panel {
-        position: absolute;
-        top: 20%;
-        right: 20px;
-        width: 350px;
-        height: 400px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        display: none; /* Standardmäßig ausblenden */
-        flex-direction: column;
-        z-index: 1000;
-        overflow: hidden;
-        transition: opacity 0.3s ease; /* Sanftes Einblenden */
-    }
+.station-panel {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    width: 350px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Standardmäßig ausblenden */
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+    /* Sanftes Einblenden */
+}
 
-    .station-panel.active {
-        display: flex; /* Aktiviert das Panel */
-        opacity: 1; /* Sichtbar */
-    }
+.station-panel.active {
+    display: flex;
+    /* Aktiviert das Panel */
+    opacity: 1;
+    /* Sichtbar */
+}
 
-
-    .panel-header {
-        background-color: #3498db; /* Primärfarbe */
-        color: white;
-        padding: 10px;
-        font-size: 1.2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 2px solid #2980b9;
+.panel-header {
+    background-color: #3498db;
+    /* Primärfarbe */
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #2980b9;
 }
 
 .panel-header h3 {
@@ -95,11 +103,15 @@ body {
 }
 
 #panel-content {
-    overflow-y: auto; /* Scrollen aktivieren */
-    max-height: calc(100% - 50px); /* Dynamische maximale Höhe */
+    overflow-y: auto;
+    /* Scrollen aktivieren */
+    max-height: calc(100% - 50px);
+    /* Dynamische maximale Höhe */
     padding: 10px;
-    box-sizing: border-box; /* Padding und Größe berücksichtigen */
-    border: 1px solid lightgray; /* Testgrenze, optional */
+    box-sizing: border-box;
+    /* Padding und Größe berücksichtigen */
+    border: 1px solid lightgray;
+    /* Testgrenze, optional */
 }
 
 /* Optional: Scrollbar-Styling */
@@ -108,12 +120,10 @@ body {
 }
 
 #panel-content::-webkit-scrollbar-thumb {
-    background-color: #3498db; /* Farbe der Scrollbar */
+    background-color: #3498db;
+    /* Farbe der Scrollbar */
     border-radius: 4px;
 }
-
-
-
 
 /* Filter Container */
 .filters-container {
@@ -133,13 +143,17 @@ body {
 }
 
 .search-container {
-    flex: 1 1 40%; /* 40% des verfügbaren Platzes */
+    flex: 1 1 40%;
+    /* 40% des verfügbaren Platzes */
     display: flex;
-    gap: 10px; /* Abstand zwischen Suchfeld und Button */
+    gap: 10px;
+    /* Abstand zwischen Suchfeld und Button */
+    position: relative;
 }
 
 #search-input {
-    flex: 1; /* Nimmt die verbleibende Breite ein */
+    flex: 1;
+    /* Nimmt die verbleibende Breite ein */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -147,7 +161,8 @@ body {
 }
 
 #search-button {
-    background: #3498db; /* Blau */
+    background: #3498db;
+    /* Blau */
     color: white;
     border: none;
     border-radius: 8px;
@@ -158,7 +173,8 @@ body {
 }
 
 #search-button:hover {
-    background: #2980b9; /* Dunkleres Blau beim Hover */
+    background: #2980b9;
+    /* Dunkleres Blau beim Hover */
 }
 
 /* Form Layout Columns */
@@ -192,15 +208,16 @@ body {
     background-color: var(--accent-color);
     color: var(--white-color);
     cursor: pointer;
-
 }
 
 .dropdown-group {
-    flex: 1 1 30%; /* 30% des verfügbaren Platzes */
+    flex: 1 1 30%;
+    /* 30% des verfügbaren Platzes */
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
+
 .dropdown {
     position: relative;
     flex: 1;
@@ -226,7 +243,8 @@ body {
 
 
 #refresh-database {
-    background: #e74c3c; /* Rotes Design */
+    background: #e74c3c;
+    /* Rotes Design */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -236,9 +254,12 @@ body {
     transition: background 0.3s ease;
 
 }
+
 #refresh-database:hover {
-    background: #c0392b; /* Dunkleres Rot */
+    background: #c0392b;
+    /* Dunkleres Rot */
 }
+
 .dropdown-button {
     background: #3498db;
     color: white;
@@ -257,9 +278,11 @@ body {
 }
 
 .dropdown-content {
-    display: none; /* Standardmäßig verstecken */
+    display: none;
+    /* Standardmäßig verstecken */
     position: absolute;
-    bottom: 110%; /* Unterhalb des Buttons */
+    bottom: 110%;
+    /* Unterhalb des Buttons */
     left: 0;
     background: #ffffff;
     border: 1px solid #ddd;
@@ -269,8 +292,10 @@ body {
     z-index: 2000;
     width: 100%;
 }
+
 .dropdown:hover .dropdown-content {
-    display: block; /* Dropdown anzeigen bei Hover */
+    display: block;
+    /* Dropdown anzeigen bei Hover */
 }
 
 @keyframes fadeIn {
@@ -278,6 +303,7 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -313,20 +339,20 @@ body {
     /* Allow vertical scrolling */
     display: none;
     box-sizing: border-box;
-    
 }
 
-.search-result{
+.search-result {
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
-    transform: scale(1.02); 
+    transform: scale(1.02);
 }
 
 .search-result:hover {
     background-color: #f0f0f0;
-    transform: scale(1.02); 
+    transform: scale(1.02);
 }
+
 @media (max-width: 768px) {
     .filters-overlay {
         width: 95%;
@@ -359,6 +385,11 @@ body {
     transform: translate(-50%, -50%);
     display: none;
     z-index: 2000;
+     justify-content: center;
+    align-items: center;
+     min-width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .spinner {
@@ -377,4 +408,33 @@ body {
     to {
         transform: rotate(360deg);
     }
+}
+
+.container.loading {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+.success-message {
+        background: white; /* set the text back to white */
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+         justify-content: center;
+       gap: 10px;
+         font-size: 1.1rem;
+          color: #27ae60;
+}
+
+.error-message {
+    background: white; /* set the text back to white */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+     align-items: center;
+      justify-content: center;
+       gap: 10px;
+         font-size: 1.1rem;
+          color: #e74c3c;
 }
