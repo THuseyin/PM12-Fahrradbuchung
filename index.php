@@ -35,7 +35,7 @@
         <div class="filters-overlay">
             <div class="filters-container">
                 <div class="search-container">
-                    <input type="text" id="search-input" placeholder="">
+                    <input type="text" id="search-input" placeholder="Enter Adress, and wait a bit :)">
                     <button id="search-button">
                         <i class="fa fa-search"></i>
                     </button>

@@ -127,7 +127,7 @@ body {
     display: flex;
     align-items: center;
     /* Align items vertically */
-    justify-content: flex-start;
+    justify-content: center;
     /* Align items to the start for search field and dropdowns */
     padding: 10px;
 }
@@ -169,6 +169,8 @@ body {
 .form-column {
     flex: 1;
     padding-right: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Booking Type Radio Buttons */
@@ -296,6 +298,7 @@ body {
 
 /* Search Results Container Styles */
 .search-results {
+    padding: 10px;
     position: absolute;
     bottom: 100%;
     left: 0;
@@ -309,6 +312,7 @@ body {
     overflow-y: auto;
     /* Allow vertical scrolling */
     display: none;
+    box-sizing: border-box;
     
 }
 
