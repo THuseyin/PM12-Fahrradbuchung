@@ -45,7 +45,7 @@ document.getElementById('refresh-database').addEventListener('click', () => {
     console.log("Button clicked");
     if (typeof refreshDatabase === 'function') {
         refreshDatabase();
-         console.log("refreshDatabase function is called");
+        console.log("refreshDatabase function is called");
     } else {
         console.error("refreshDatabase function is not defined.");
     }
@@ -56,12 +56,19 @@ document.querySelectorAll('input[type="checkbox"], input[name="booking-type"]').
     filter.addEventListener('change', () => {
         console.log("Filter changed");
         const filters = getFilters();
-         console.log("New filters:", filters);
+        console.log("New filters:", filters);
         clearLayers();
+        clearPolylines();
+        const panel = document.getElementById('station-panel');
+        panel.classList.remove('active');
+        if (selectedStationMarker) {
+            map.removeLayer(selectedStationMarker);
+            selectedStationMarker = null;
+        }
         loadRoutesData(filters).then(data => {
             processroutesData(data);
-             routesData = data;
-               console.log("Routes data loaded successfully with new filters:", routesData);
+            routesData = data;
+            console.log("Routes data loaded successfully with new filters:", routesData);
         }).catch(error => {
             console.error('Error loading data:', error);
         });
@@ -72,19 +79,19 @@ document.querySelectorAll('input[type="checkbox"], input[name="booking-type"]').
 map.on('click', (e) => {
     const panel = document.getElementById('station-panel');
     const searchResultsContainer = document.getElementById('search-results-container');
-     console.log("Map clicked", e.originalEvent.target);
+    console.log("Map clicked", e.originalEvent.target);
     if (panel.classList.contains('active') && !e.originalEvent.target.closest('.station-panel')) {
-         panel.classList.remove('active');
-            console.log("Station panel closed on map click");
-       if (selectedStationMarker) {
-           map.removeLayer(selectedStationMarker);
-            selectedStationMarker= null;
+        panel.classList.remove('active');
+        console.log("Station panel closed on map click");
+        if (selectedStationMarker) {
+            map.removeLayer(selectedStationMarker);
+            selectedStationMarker = null;
             console.log("selectedStationMarker removed");
-          }
+        }
     }
-    if(searchResultsContainer && !e.originalEvent.target.closest('.search-results')){
-         searchResultsContainer.style.display = 'none';
-          console.log("Search suggestions closed on map click");
+    if (searchResultsContainer && !e.originalEvent.target.closest('.search-results')) {
+        searchResultsContainer.style.display = 'none';
+        console.log("Search suggestions closed on map click");
     }
     clearPolylines();
     processroutesData(routesData);
@@ -94,7 +101,7 @@ map.on('click', (e) => {
 function getFilters() {
     const selectedPortals = Array.from(document.querySelectorAll('input[name="portals[]"]:checked')).map(cb => cb.value);
     const selectedDays = Array.from(document.querySelectorAll('input[name="days[]"]:checked')).map(cb => cb.value);
-      console.log("Current filters:", { portals: selectedPortals, days: selectedDays });
+    console.log("Current filters:", { portals: selectedPortals, days: selectedDays });
     return {
         portals: selectedPortals,
         days: selectedDays
@@ -105,17 +112,17 @@ function getFilters() {
 function loadRoutesData(filters) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-         console.log("Fetching routes data with filters:", filters);
+        console.log("Fetching routes data with filters:", filters);
         xhr.open('GET', `./cache_handler.php?&filters=${JSON.stringify(filters)}`, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     try {
                         const data = JSON.parse(xhr.responseText);
-                         console.log("Routes data fetched successfully:", data);
+                        console.log("Routes data fetched successfully:", data);
                         resolve(data);
                     } catch (error) {
-                         console.error('Error parsing routes data:', error);
+                        console.error('Error parsing routes data:', error);
                         reject(error);
                     }
                 } else {
@@ -129,7 +136,7 @@ function loadRoutesData(filters) {
 }
 // --------EVENT LISTENER--------
 function loadStationsData() {
-     return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         console.log("Fetching stations data");
         xhr.open('GET', `./stations.php`, true);
@@ -141,11 +148,11 @@ function loadStationsData() {
                         console.log("Stations data fetched successfully:", data);
                         resolve(data);
                     } catch (error) {
-                          console.error('Error parsing stations data:', error);
+                        console.error('Error parsing stations data:', error);
                         reject(error);
                     }
                 } else {
-                     console.error('Error loading stations data:', xhr.statusText);
+                    console.error('Error loading stations data:', xhr.statusText);
                     reject(xhr.statusText);
                 }
             }
@@ -157,7 +164,7 @@ function loadStationsData() {
 function processroutesData(data) {
     const bookingType = document.querySelector('input[name="booking-type"]:checked')?.value || "start";
     const stationCounts = {};
-     console.log("Processing routes data with booking type:", bookingType);
+    console.log("Processing routes data with booking type:", bookingType);
     data.forEach(route => {
         let stationId;
         let latitude;
@@ -180,9 +187,9 @@ function processroutesData(data) {
             stationCounts[stationId].count++;
             stationCounts[stationId].latitude = latitude;
             stationCounts[stationId].longitude = longitude;
-             stationCounts[stationId].stationName = stationName;
+            stationCounts[stationId].stationName = stationName;
         } else {
-             stationCounts[stationId] = { count: 1, latitude: latitude, longitude: longitude, stationName: stationName };
+            stationCounts[stationId] = { count: 1, latitude: latitude, longitude: longitude, stationName: stationName };
         }
     });
 
@@ -192,11 +199,11 @@ function processroutesData(data) {
     const twentyPercent = Math.floor(totalStations * 0.2);
     const topTwentyPercentThreshold = sortedTransactions[totalStations - twentyPercent - 1];
     const bottomTwentyPercentThreshold = sortedTransactions[twentyPercent];
-        console.log("Station counts:", stationCounts);
-        console.log("Transactions:", transactions);
-       console.log("Sorted transactions:", sortedTransactions);
-        console.log("Top 20% threshold:", topTwentyPercentThreshold);
-        console.log("Bottom 20% threshold:", bottomTwentyPercentThreshold);
+    console.log("Station counts:", stationCounts);
+    console.log("Transactions:", transactions);
+    console.log("Sorted transactions:", sortedTransactions);
+    console.log("Top 20% threshold:", topTwentyPercentThreshold);
+    console.log("Bottom 20% threshold:", bottomTwentyPercentThreshold);
     clearLayers();
 
     for (const stationId in stationCounts) {
@@ -213,7 +220,7 @@ function processroutesData(data) {
             <b>Station Name:</b> ${station.stationName}<br>
             <b>Station ID:</b> ${stationId}<br>
             <b>Transactions:</b> ${station.count}`;
-         console.log("Adding marker for station:", {stationId, station, markerIcon});
+        console.log("Adding marker for station:", { stationId, station, markerIcon });
         const marker = L.marker([station.latitude, station.longitude], {
             icon: markerIcon,
             stationID: station.stationId
@@ -223,8 +230,8 @@ function processroutesData(data) {
 
 
         marker.on('click', () => {
-             station.stationId = stationId;
-              handleMarkerClick(station);
+            station.stationId = stationId;
+            handleMarkerClick(station);
         });
     }
 }
@@ -236,48 +243,48 @@ function handleMarkerClick(station) {
     station.longitude = station.longitude ?? station.Longitude;
     station.stationName = station.stationName ?? station.Station_Name;
 
-     const panel = document.getElementById('station-panel');
-      const panelContent = document.getElementById('panel-content');
-     console.log("Marker clicked for station:", station);
+    const panel = document.getElementById('station-panel');
+    const panelContent = document.getElementById('panel-content');
+    console.log("Marker clicked for station:", station);
     panel.classList.add('active');
     // Fetch detailed data
-     const startTransactions = routesData.filter(route => route.Start_Station_ID == station.stationId).length;
-      const endTransactions = routesData.filter(route => route.Ende_Station_ID == station.stationId).length;
-       // Find top 5 outbound stations
-        const outboundStations = routesData
+    const startTransactions = routesData.filter(route => route.Start_Station_ID == station.stationId).length;
+    const endTransactions = routesData.filter(route => route.Ende_Station_ID == station.stationId).length;
+    // Find top 5 outbound stations
+    const outboundStations = routesData
         .filter(route => route.Start_Station_ID == station.stationId)
-            .reduce((acc, route) => {
-                const endStation = route.Ende_Station;
-                if (acc[endStation]) {
-                    acc[endStation]++;
-                } else {
-                    acc[endStation] = 1;
-                }
-                return acc;
-            }, {});
+        .reduce((acc, route) => {
+            const endStation = route.Ende_Station;
+            if (acc[endStation]) {
+                acc[endStation]++;
+            } else {
+                acc[endStation] = 1;
+            }
+            return acc;
+        }, {});
     const topOutbound = Object.entries(outboundStations)
-            .sort(([, countA], [, countB]) => countB - countA)
-            .slice(0, 5)
-             .map(([stationName, count]) => `<p>${stationName} : ${count}</p> `);
-            // Find top 5 inbound stations
-     const inboundStations = routesData
-            .filter(route => route.Ende_Station_ID == station.stationId)
-             .reduce((acc, route) => {
-                 const startStation = route.Start_Station;
-                    if (acc[startStation]) {
-                    acc[startStation]++;
-                 } else {
-                     acc[startStation] = 1;
-                  }
-                return acc;
-            }, {});
-       const topInbound = Object.entries(inboundStations)
-          .sort(([, countA], [, countB]) => countB - countA)
-            .slice(0, 5)
-              .map(([stationName, count]) => `<p> ${stationName} : ${count} </p>`);
+        .sort(([, countA], [, countB]) => countB - countA)
+        .slice(0, 5)
+        .map(([stationName, count]) => `<p>${stationName} : ${count}</p> `);
+    // Find top 5 inbound stations
+    const inboundStations = routesData
+        .filter(route => route.Ende_Station_ID == station.stationId)
+        .reduce((acc, route) => {
+            const startStation = route.Start_Station;
+            if (acc[startStation]) {
+                acc[startStation]++;
+            } else {
+                acc[startStation] = 1;
+            }
+            return acc;
+        }, {});
+    const topInbound = Object.entries(inboundStations)
+        .sort(([, countA], [, countB]) => countB - countA)
+        .slice(0, 5)
+        .map(([stationName, count]) => `<p> ${stationName} : ${count} </p>`);
 
 
-     panelContent.innerHTML = `
+    panelContent.innerHTML = `
          <p><b>Station Name:</b> ${station.stationName}</p>
         <p><b>Start Transactions:</b> ${startTransactions}</p>
          <p><b>End Transactions:</b> ${endTransactions}</p>
@@ -285,27 +292,27 @@ function handleMarkerClick(station) {
         <p><b>Top 5 Inbound Stations:</b> ${topInbound.length > 0 ? topInbound.join('') : 'No inbound data'}</p>
      `;
     // Close panel button
-     const closeButton =  document.getElementById('close-panel-button');
-      closeButton.onclick = () => {
-           panel.classList.remove('active');
-            if (selectedStationMarker) {
-           map.removeLayer(selectedStationMarker);
-            selectedStationMarker= null;
-              console.log("Station panel closed");
-          }
-         };
-    
-    clearPolylines();
-     // Remove previous marker
-      if (selectedStationMarker) {
+    const closeButton = document.getElementById('close-panel-button');
+    closeButton.onclick = () => {
+        panel.classList.remove('active');
+        if (selectedStationMarker) {
             map.removeLayer(selectedStationMarker);
-              console.log("Previous selectedStationMarker removed");
-      }
-     // Add the blue marker at the selected station's location
-       selectedStationMarker = L.marker([station.latitude, station.longitude], {
-         icon: blueMarker
-        }).addTo(map);
-        console.log("Added blue marker to selected station:", station);
+            selectedStationMarker = null;
+            console.log("Station panel closed");
+        }
+    };
+
+    clearPolylines();
+    // Remove previous marker
+    if (selectedStationMarker) {
+        map.removeLayer(selectedStationMarker);
+        console.log("Previous selectedStationMarker removed");
+    }
+    // Add the blue marker at the selected station's location
+    selectedStationMarker = L.marker([station.latitude, station.longitude], {
+        icon: blueMarker
+    }).addTo(map);
+    console.log("Added blue marker to selected station:", station);
     handleRoutes(station);
 }
 
